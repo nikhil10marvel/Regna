@@ -1,0 +1,34 @@
+require javax.swing.JOptionPane;
+
+module nikhil pkg io.regna {
+
+    val String ab = "Hi!";
+    stval const String msg = "Some message";
+
+    construct {
+        let ab = "Ok";
+        print this => ab;
+        let ab = "Hi!";
+    }
+
+    #[
+     # This is a multi-line comment
+    ]#
+    stfc void main(args : String[]) {
+        structdef test {
+            int num,
+            float PI
+        };
+        val RStruct testvar;
+        struct test init testvar {PI 314, num 225};
+        System.out -> println(System => out);
+        ## System.out -> println((05 + 02));
+        ## System.out -> println(Main => VERSION_ID);
+        val int VERSION = 12;
+        System.out -> println(VERSION);
+        testvar -> serialize();
+        ## System.out -> println(struct testvar => id);
+        JOptionPane -> showMessageDialog(null, msg);
+    }
+
+}
