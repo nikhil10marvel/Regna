@@ -18,11 +18,12 @@ public class RStruct implements Serializable{
     private DataOutputStream internal;
     private DataOutputStream external;
     protected HashMap<String, Object> values;
+    private byte[] header;
     protected transient final RStructDef structDef;
     protected final StructHeader structHeader;
     public static final Logger LOG = Logger.getLogger("struct");
     private static final byte[] unique_byte_maigc = {(byte)0x7A, (byte)0x20, (byte)0x17, (byte)0x24};
-    protected static final byte[] string_magic = "RGN_STRUCT".getBytes(StandardCharsets.ISO_8859_1);
+    protected static final byte[] string_magic = "regna_struct".getBytes(StandardCharsets.ISO_8859_1);
     protected final byte[] magic;
 
 
@@ -34,6 +35,19 @@ public class RStruct implements Serializable{
         external = new DataOutputStream(external_bytes);
         magic = CommonUtils.arrayMerge(string_magic, unique_byte_maigc);
         writeMagic();
+    }
+
+    public void prepare(){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos;
+        try {
+            oos = new ObjectOutputStream(baos);
+            oos.writeObject(structDef);
+            oos.close();
+            baos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void writeMagic(){
@@ -84,11 +98,11 @@ public class RStruct implements Serializable{
     }
 
     public Object getvalue(String name){
-        Class<?> clazz = null;
+        Class<?> clazz;
         try {
             clazz = Class.forName(structHeader.getType(name));
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Class in structdef is not loaded properly", e);
+            throw new RuntimeException("Class in Structure Definition is not loaded properly", e);
         }
         return getvalue(name, clazz);
     }
@@ -117,16 +131,11 @@ public class RStruct implements Serializable{
             putname(entry.getKey());
             byteObject(entry.getValue());
         });
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = null;
         try {
-            oos = new ObjectOutputStream(baos);
-            oos.writeObject(structDef);
-            oos.close();
-            baos.close();
             //System.out.println(Arrays.toString(magic));
-            external.writeInt(baos.size());
-            external.write(baos.toByteArray());
+            if(header == null) throw new RuntimeException("Struct header " + structDef.name + " wasn't constructed on instantiation");
+            external.writeInt(header.length);
+            external.write(header);
             byte[] internal_data = internal_bytes.toByteArray();
             external.writeInt(internal_data.length);
             external.write(internal_data);
@@ -138,7 +147,7 @@ public class RStruct implements Serializable{
             e.printStackTrace();
         }
         try {
-            Files.write(Paths.get("test.struct"), external_bytes.toByteArray());
+            Files.write(Paths.get("test.bin"), external_bytes.toByteArray());
         } catch (IOException e) {
             e.printStackTrace();
         }

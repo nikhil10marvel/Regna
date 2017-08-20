@@ -7,7 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="antlr-4.7-complete" level="project" />
-    <orderEntry type="library" name="javassist" level="project" />
+    <orderEntry type="library" exported="" name="antlr-4.7-complete" level="project" />
+    <orderEntry type="library" exported="" name="javassist" level="project" />
+    <orderEntry type="library" exported="" name="kryo" level="application" />
   </component>
 </module>
