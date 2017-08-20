@@ -6,11 +6,69 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30479996-1897-457d-8782-a80e83abc95d" name="Default" comment="Made some changes in RStruct and StructDef added Serializer Thread">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/SerializerThread.java" />
+    <list default="true" id="30479996-1897-457d-8782-a80e83abc95d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Regna/test.struct" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nikhil.class" afterPath="$PROJECT_DIR$/nikhil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaBaseListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AddContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AddContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AridContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AridContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Attrdef_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Attrdef_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AttributesContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AttributesContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AttrvaldefContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AttrvaldefContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Box_typesContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Box_typesContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Call_midContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Call_midContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Call_paramsContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Call_paramsContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Construct_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Construct_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ConstructorContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ConstructorContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ExprContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ExprContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Field_paramContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Field_paramContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FormalParamContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FormalParamContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FormalParamListContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FormalParamListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FuncContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FuncContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FunctionListContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$FunctionListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$IdContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$IdContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Internal_callContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Internal_callContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Localvar_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Localvar_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Member_ruleContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Member_ruleContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Membercall_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Membercall_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$MidContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$MidContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ModuleBodyContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ModuleBodyContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ModuleContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ModuleContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$MultContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$MultContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Print_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Print_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ProgramContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ProgramContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$RequireContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$RequireContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$RequireListContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$RequireListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Ret_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Ret_typeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Static_attrdefContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Static_attrdefContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StaticformalFunctionContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StaticformalFunctionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StmtListContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$StmtListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_bodyContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_bodyContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_init_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_init_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_paramContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_paramContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_set_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_set_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_valContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Struct_valContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$TypeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Type_idContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Type_idContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ValueContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$ValueContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Vardef_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Vardef_stmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$VartypeContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$VartypeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct$StructHeader.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct$StructHeader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/ByteCodeListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/ByteCodeListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Regna.iml" afterPath="$PROJECT_DIR$/Regna.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/Regna.g4" afterPath="$PROJECT_DIR$/out/production/Regna/Regna.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Regna.g4" afterPath="$PROJECT_DIR$/src/Regna.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaBaseListener.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaListener.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaParser.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" afterPath="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" afterPath="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.rgn" afterPath="$PROJECT_DIR$/test.rgn" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,14 +80,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="RStruct.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RStruct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="110" column="12" lean-forward="false" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+            <state relative-caret-position="432">
+              <caret line="194" column="62" lean-forward="false" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#253#280#0" expanded="true" />
+                <element signature="e#278#305#0" expanded="true" />
+                <element signature="e#3516#3517#0" expanded="true" />
+                <element signature="e#3555#3556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ByteCodeListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3151">
+              <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,18 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/CommonUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RegnaCompilationException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,8 +147,8 @@
       <file leaf-file-name="RegnaParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="139" column="13" lean-forward="false" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+            <state relative-caret-position="20">
+              <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -97,8 +157,8 @@
       <file leaf-file-name="test.rgn" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.rgn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="446">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -107,18 +167,18 @@
       <file leaf-file-name="Regna.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Regna.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+            <state relative-caret-position="379">
+              <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nikhil.class" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nikhil.class" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nikhil.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="440">
+              <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -127,8 +187,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state relative-caret-position="160">
+              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -158,6 +218,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Fi" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -171,7 +236,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/io/regna/core/io/regna/core/ParserFacade.java" />
         <option value="$PROJECT_DIR$/src/io/regna/core/RegnaLexer.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/core/Main.java" />
         <option value="$PROJECT_DIR$/src/io/regna/jvm/RStruct.java" />
         <option value="$PROJECT_DIR$/src/io/regna/std/RStructDef.java" />
         <option value="$PROJECT_DIR$/nikhil.class" />
@@ -181,15 +245,16 @@
         <option value="$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java" />
         <option value="$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java" />
         <option value="$PROJECT_DIR$/src/io/regna/std/RStruct.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
-        <option value="$PROJECT_DIR$/src/Regna.g4" />
-        <option value="$PROJECT_DIR$/test.rgn" />
         <option value="$PROJECT_DIR$/src/io/regna/io/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/io/regna/internal/RStructDef.java" />
         <option value="$PROJECT_DIR$/src/util/Serializer.java" />
         <option value="$PROJECT_DIR$/src/util/SerializerThread.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/Main.java" />
+        <option value="$PROJECT_DIR$/src/Regna.g4" />
+        <option value="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
         <option value="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" />
+        <option value="$PROJECT_DIR$/test.rgn" />
       </list>
     </option>
   </component>
@@ -374,6 +439,14 @@
       <option name="presentableId" value="Default" />
       <updated>1501827855443</updated>
     </task>
+    <task id="LOCAL-00001" summary="Made some changes in RStruct and StructDef added Serializer Thread">
+      <created>1503222889675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1503222889675</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -470,7 +543,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made some changes in RStruct and StructDef added Serializer Thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some changes in RStruct and StructDef added Serializer Thread" />
+    <MESSAGE value="Fixed fast RStructs variable referencing, serialization, etc. Added type casting. Changed variable referencing Syntax, it now returns a Generic Object instead of the actual Object. It can now take an additional parameter, with which it is automatically casted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed fast RStructs variable referencing, serialization, etc. Added type casting. Changed variable referencing Syntax, it now returns a Generic Object instead of the actual Object. It can now take an additional parameter, with which it is automatically casted." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -820,54 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="139" column="13" lean-forward="false" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rgn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nikhil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStructDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/SerializerThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -879,14 +895,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
+    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStructDef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="110" column="12" lean-forward="false" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+        <state relative-caret-position="160">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3151">
+          <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#253#280#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="194" column="62" lean-forward="false" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#278#305#0" expanded="true" />
+            <element signature="e#3516#3517#0" expanded="true" />
+            <element signature="e#3555#3556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.rgn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nikhil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

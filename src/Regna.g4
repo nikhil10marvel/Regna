@@ -87,7 +87,7 @@ value: id
 field_param: Const | TRANSIENT;
 
 box_types: StringLiteral | id | mid | call_mid;
-type: CHRCT | INTEGER | StringLiteral| BlankLiteral | id | expr | member_rule | internal_call | mid | call_mid| struct_val;
+type: CHRCT | INTEGER | StringLiteral| BlankLiteral | id | expr | member_rule | internal_call | mid | call_mid | struct_val | cast_type;
 
 /**
     Functions go something like this..
@@ -110,12 +110,14 @@ call_params: LPRM (type)? (PARAM_SEPERATOR (type))*? RPRM;
 membercall_stmt: type MEMBER_CT id call_params EOS;
 internal_call: box_types MEMBER_CT id call_params;
 member_rule: mid MEMBER_T id;
+cast_type: LPRM extract_type RPRM type;
 
 struct_body: type_id id (PARAM_SEPERATOR type_id id)+;
 struct_stmt: STRUCT_DEF id LBRC struct_body? RBRC EOS;
 struct_param: id type;
 struct_init_stmt: STRUCT_T mid 'init' id LBRC (struct_param (PARAM_SEPERATOR struct_param)*)* RBRC EOS;
-struct_val: STRUCT_T mid MEMBER_T id;
+extract_type: (mid|type_id);
+struct_val: STRUCT_T mid MEMBER_T extract_type? id;
 struct_set_stmt: STRUCT_T VAR_DEC mid id EQUALS type;
 
 stmt

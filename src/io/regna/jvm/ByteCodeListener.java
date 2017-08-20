@@ -167,16 +167,27 @@ public class ByteCodeListener extends RegnaBaseListener {
         else if(ctx.expr() != null) return convertExpr(ctx.expr().getText());
         else if(ctx.id() != null) return ctx.id().getText();
         else if(ctx.mid() != null) return ctx.mid().getText();
+        else if (ctx.struct_val() != null) return convertStructVal(ctx.struct_val());
         else if(ctx.internal_call() != null) return convertInternalCall(ctx.internal_call());
         else if(ctx.call_mid() != null) return ctx.call_mid().getText();
         else if(ctx.StringLiteral() != null) return getTerminalText(ctx.StringLiteral());
         else if(ctx.BlankLiteral() != null) return getTerminalText(ctx.BlankLiteral());
-        else if(ctx.struct_val() != null) return convertStructVal(ctx.struct_val());
+        else if (ctx.cast_type() != null) return convertCasting(ctx.cast_type());
         else return null;
     }
 
     private String convertStructVal(RegnaParser.Struct_valContext ctx){
-        return ctx.mid().getText() + ".getvalue(\"" + ctx.id().getText() + "\")";
+        if (ctx.extract_type() != null) {
+            //System.out.println("(" + ctx.extract_type().getText() + ")" + ctx.mid().getText() + ".getvalue(\"" + ctx.id().getText() + "\")");
+            return "(" + ctx.extract_type().getText() + ")" + ctx.mid().getText() + ".getvalue(\"" + ctx.id().getText() + "\")";
+        } else {
+            //System.out.println(ctx.mid().getText() + ".getvalue(\"" + ctx.id().getText() + "\")");
+            return ctx.mid().getText() + ".getvalue(\"" + ctx.id().getText() + "\")";
+        }
+    }
+
+    private String convertCasting(RegnaParser.Cast_typeContext ctx) {
+        return "(" + ctx.extract_type().getText() + ")" + getTypeText(ctx.type());
     }
 
     private String convertMemberCall(RegnaParser.Member_ruleContext ctx){

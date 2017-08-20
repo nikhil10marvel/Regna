@@ -268,7 +268,20 @@ public interface RegnaListener extends ParseTreeListener {
 	 */
 	void exitMember_rule(RegnaParser.Member_ruleContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link RegnaParser#struct_body}.
+     * Enter a parse tree produced by {@link RegnaParser#cast_type}.
+     * @param ctx the parse tree
+     */
+    void enterCast_type(RegnaParser.Cast_typeContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#cast_type}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitCast_type(RegnaParser.Cast_typeContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#struct_body}.
 	 * @param ctx the parse tree
 	 */
 	void enterStruct_body(RegnaParser.Struct_bodyContext ctx);
@@ -307,6 +320,20 @@ public interface RegnaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#extract_type}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterExtract_type(RegnaParser.Extract_typeContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#extract_type}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitExtract_type(RegnaParser.Extract_typeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RegnaParser#struct_val}.
 	 * @param ctx the parse tree

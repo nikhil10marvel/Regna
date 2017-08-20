@@ -17,15 +17,17 @@ module nikhil pkg io.regna {
     stfc void main(args : String[]) {
         structdef test {
             int num,
-            float PI
+            float PI,
+            String name
         };
         val RStruct testvar;
-        struct test init testvar {PI 314, num 225};
+        struct test init testvar {PI 314, num 225, name "Nikhil"};
         System.out -> println(System => out);
         ## System.out -> println((05 + 02));
         ## System.out -> println(Main => VERSION_ID);
-        val int VERSION = 12;
-        System.out -> println(VERSION);
+        val String VERSION = "Hello";
+        System.out -> println(struct testvar => CharSequence name);
+        testvar -> prepare();
         testvar -> serialize();
         ## System.out -> println(struct testvar => id);
         JOptionPane -> showMessageDialog(null, msg);

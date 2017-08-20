@@ -328,7 +328,25 @@ public class RegnaBaseListener implements RegnaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStruct_body(RegnaParser.Struct_bodyContext ctx) { }
+    @Override
+    public void enterCast_type(RegnaParser.Cast_typeContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override
+    public void exitCast_type(RegnaParser.Cast_typeContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void enterStruct_body(RegnaParser.Struct_bodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -370,7 +388,25 @@ public class RegnaBaseListener implements RegnaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx) { }
+    @Override public void exitStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override
+    public void enterExtract_type(RegnaParser.Extract_typeContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override
+    public void exitExtract_type(RegnaParser.Extract_typeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

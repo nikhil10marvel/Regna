@@ -42,12 +42,14 @@ public class RStruct implements Serializable{
         ObjectOutputStream oos;
         try {
             oos = new ObjectOutputStream(baos);
-            oos.writeObject(structDef);
+            oos.writeObject(structHeader);
             oos.close();
             baos.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        header = baos.toByteArray();
+        //System.out.println("Header bytes:"+ Arrays.toString(header));
     }
 
     private void writeMagic(){
@@ -97,15 +99,21 @@ public class RStruct implements Serializable{
         return clazz.cast(values.get(name));
     }
 
-    public Object getvalue(String name){
+    @Deprecated
+    public Object getvalueO(String name) {
         Class<?> clazz;
         try {
-            clazz = Class.forName(structHeader.getType(name));
+            clazz = Class.forName(convertToWrapper(structHeader.getType(name)));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Class in Structure Definition is not loaded properly", e);
         }
         return getvalue(name, clazz);
     }
+
+    public Object getvalue(String name) {
+        return values.get(name);
+    }
+
     public static class StructHeader  implements Serializable{
 
         public HashMap<String, String> vars;
@@ -123,6 +131,29 @@ public class RStruct implements Serializable{
             return vars.get(name);
         }
 
+    }
+
+    private String convertToWrapper(String toconv) {
+        switch (toconv) {
+
+            case "float":
+                return "Float";
+
+            case "boolean":
+                return "Boolean";
+
+            case "byte":
+                return "Byte";
+
+            case "short":
+                return "Short";
+
+            case "int":
+                return "Integer";
+
+            default:
+                return toconv;
+        }
     }
 
     public void serialize(){
@@ -162,6 +193,7 @@ public class RStruct implements Serializable{
             else if(value instanceof Long) internal.writeLong((long)value);
             else if(value instanceof Short) internal.writeShort((short) value);
             else if(value instanceof Byte) internal.write((byte) value);
+            else if (value instanceof String) internal.writeUTF((String) value);
             else if(value instanceof Serializable) putObject(value);
         } catch (IOException ioe){
             ioe.printStackTrace();
