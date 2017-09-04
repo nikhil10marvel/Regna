@@ -20,55 +20,61 @@ public class RegnaParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, MODULE_DEC=5, LBRC=6, RBRC=7, LPRM=8, 
-		RPRM=9, PARAM_SEPERATOR=10, PARAM_TYPE_DEF=11, VAR_DEC=12, EQUALS=13, 
-		PKGID=14, EOS=15, CMTCH=16, MCOMO=17, MCOMC=18, L_VOID=19, FUNC_DEF=20, 
-		CONSTRUCT_DEF=21, PRINT=22, REQUIRE=23, STATICFUNC=24, MEMBER_CT=25, MEMBER_T=26, 
-		CONSTRUCTOR=27, ATTRIBUTE_DEF=28, Const=29, TRANSIENT=30, STATICATTRIBUTE=31, 
-		STRUCT_DEF=32, STRUCT_T=33, CHAR_ID=34, INT_ID=35, STR_ID=36, DBL_id=37, 
-		FLT_ID=38, BYTE=39, SERIALIZABLE=40, INTEGER=41, SIMP_CHAR=42, SIMP_CHARS=43, 
-		BASE_CHARACTER=44, BASE_CHARACTERS=45, AR_CHARS=46, CHRCT=47, BlankLiteral=48, 
-		StringLiteral=49, LINE_COMMENT=50, MULTI_COMMENT=51, WS=52;
+			T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, MODULE_DEC = 7, LBRC = 8,
+			RBRC = 9, LPRM = 10, RPRM = 11, PARAM_SEPERATOR = 12, PARAM_TYPE_DEF = 13, VAR_DEC = 14,
+			EQUALS = 15, PKGID = 16, EOS = 17, CMTCH = 18, MCOMO = 19, MCOMC = 20, L_VOID = 21,
+			FUNC_DEF = 22, CONSTRUCT_DEF = 23, PRINT = 24, REQUIRE = 25, STATICFUNC = 26, MEMBER_CT = 27,
+			MEMBER_T = 28, CONSTRUCTOR = 29, ATTRIBUTE_DEF = 30, Const = 31, TRANSIENT = 32,
+			STATICATTRIBUTE = 33, STRUCT_DEF = 34, STRUCT_T = 35, CHAR_ID = 36, INT_ID = 37,
+			STR_ID = 38, DBL_id = 39, FLT_ID = 40, BYTE = 41, SERIALIZABLE = 42, Compiler_Compile_CMD = 43,
+			Compiler_cpextend_CMD = 44, INTEGER = 45, SIMP_CHAR = 46, SIMP_CHARS = 47, BASE_CHARACTER = 48,
+			BASE_CHARACTERS = 49, AR_CHARS = 50, CHRCT = 51, BlankLiteral = 52, StringLiteral = 53,
+			LINE_COMMENT = 54, MULTI_COMMENT = 55, WS = 56;
 	public static final int
-		RULE_id = 0, RULE_mid = 1, RULE_call_mid = 2, RULE_arid = 3, RULE_type_id = 4, 
-		RULE_ret_type = 5, RULE_add = 6, RULE_mult = 7, RULE_expr = 8, RULE_value = 9, 
-		RULE_field_param = 10, RULE_box_types = 11, RULE_type = 12, RULE_vartype = 13, 
-		RULE_vardef_stmt = 14, RULE_localvar_stmt = 15, RULE_print_stmt = 16, 
-		RULE_construct_stmt = 17, RULE_attrvaldef = 18, RULE_attrdef_stmt = 19, 
-		RULE_static_attrdef = 20, RULE_require = 21, RULE_call_params = 22, RULE_membercall_stmt = 23,
-			RULE_internal_call = 24, RULE_member_rule = 25, RULE_cast_type = 26, RULE_struct_body = 27,
-			RULE_struct_stmt = 28, RULE_struct_param = 29, RULE_struct_init_stmt = 30,
-			RULE_extract_type = 31, RULE_struct_val = 32, RULE_struct_set_stmt = 33,
-			RULE_stmt = 34, RULE_requireList = 35, RULE_stmtList = 36, RULE_formalParam = 37,
-			RULE_formalParamList = 38, RULE_staticformalFunction = 39, RULE_func = 40,
-			RULE_constructor = 41, RULE_functionList = 42, RULE_attributes = 43, RULE_moduleBody = 44,
-			RULE_module = 45, RULE_program = 46;
+			RULE_id = 0, RULE_mid = 1, RULE_call_mid = 2, RULE_arid = 3, RULE_type_id = 4,
+			RULE_ret_type = 5, RULE_add = 6, RULE_mult = 7, RULE_expr = 8, RULE_value = 9,
+			RULE_field_param = 10, RULE_box_types = 11, RULE_type = 12, RULE_vartype = 13,
+			RULE_vardef_stmt = 14, RULE_localvar_stmt = 15, RULE_print_stmt = 16,
+			RULE_construct_stmt = 17, RULE_construct_call = 18, RULE_attrvaldef = 19,
+			RULE_attrdef_stmt = 20, RULE_static_attrdef = 21, RULE_require = 22, RULE_call_params = 23,
+			RULE_membercall_stmt = 24, RULE_internal_call = 25, RULE_member_rule = 26,
+			RULE_cast_type = 27, RULE_struct_body = 28, RULE_struct_stmt = 29, RULE_struct_param = 30,
+			RULE_struct_init_stmt = 31, RULE_extract_type = 32, RULE_struct_val = 33,
+			RULE_struct_set_stmt = 34, RULE_stmt = 35, RULE_compiler_compile_instruction = 36,
+			RULE_compiler_cp_instruction = 37, RULE_compiler_instruction = 38, RULE_requireList = 39,
+			RULE_stmtList = 40, RULE_formalParam = 41, RULE_formalParamList = 42,
+			RULE_staticformalFunction = 43, RULE_func = 44, RULE_constructor = 45,
+			RULE_functionList = 46, RULE_attributes = 47, RULE_moduleBody = 48, RULE_module = 49,
+			RULE_program = 50;
 	public static final String[] ruleNames = {
-		"id", "mid", "call_mid", "arid", "type_id", "ret_type", "add", "mult", 
-		"expr", "value", "field_param", "box_types", "type", "vartype", "vardef_stmt", 
-		"localvar_stmt", "print_stmt", "construct_stmt", "attrvaldef", "attrdef_stmt", 
-		"static_attrdef", "require", "call_params", "membercall_stmt", "internal_call",
-			"member_rule", "cast_type", "struct_body", "struct_stmt", "struct_param",
-			"struct_init_stmt", "extract_type", "struct_val", "struct_set_stmt", "stmt",
+			"id", "mid", "call_mid", "arid", "type_id", "ret_type", "add", "mult",
+			"expr", "value", "field_param", "box_types", "type", "vartype", "vardef_stmt",
+			"localvar_stmt", "print_stmt", "construct_stmt", "construct_call", "attrvaldef",
+			"attrdef_stmt", "static_attrdef", "require", "call_params", "membercall_stmt",
+			"internal_call", "member_rule", "cast_type", "struct_body", "struct_stmt",
+			"struct_param", "struct_init_stmt", "extract_type", "struct_val", "struct_set_stmt",
+			"stmt", "compiler_compile_instruction", "compiler_cp_instruction", "compiler_instruction",
 			"requireList", "stmtList", "formalParam", "formalParamList", "staticformalFunction",
 			"func", "constructor", "functionList", "attributes", "moduleBody", "module",
 			"program"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'+'", "'-'", "'*'", "'/'", "'module'", "'{'", "'}'", "'('", "')'", 
-		"','", "':'", null, "'='", "'pkg'", "';'", "'##'", "'#['", "']#'", "'void'", 
-		"'def'", "'construct'", null, null, "'stfc'", "'->'", "'=>'", "'init'", 
-		null, null, null, "'stval'", "'structdef'", "'struct'", "'char'", "'int'", 
-		"'String'", "'double'", "'float'", "'byte'", "'serializable'"
+			null, "'+'", "'-'", "'*'", "'/'", "'init'", "'#'", "'module'", "'{'",
+			"'}'", "'('", "')'", "','", "':'", null, "'='", "'pkg'", "';'", "'##'",
+			"'#['", "']#'", "'void'", "'def'", "'construct'", null, null, "'stfc'",
+			"'->'", "'=>'", null, null, null, null, "'stval'", "'structdef'", "'struct'",
+			"'char'", "'int'", "'String'", "'double'", "'float'", "'byte'", "'serializable'",
+			"'compile'", "'include'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, "MODULE_DEC", "LBRC", "RBRC", "LPRM", "RPRM", 
-		"PARAM_SEPERATOR", "PARAM_TYPE_DEF", "VAR_DEC", "EQUALS", "PKGID", "EOS", 
-		"CMTCH", "MCOMO", "MCOMC", "L_VOID", "FUNC_DEF", "CONSTRUCT_DEF", "PRINT", 
-		"REQUIRE", "STATICFUNC", "MEMBER_CT", "MEMBER_T", "CONSTRUCTOR", "ATTRIBUTE_DEF", 
-		"Const", "TRANSIENT", "STATICATTRIBUTE", "STRUCT_DEF", "STRUCT_T", "CHAR_ID", 
-		"INT_ID", "STR_ID", "DBL_id", "FLT_ID", "BYTE", "SERIALIZABLE", "INTEGER", 
+			null, null, null, null, null, null, null, "MODULE_DEC", "LBRC", "RBRC",
+			"LPRM", "RPRM", "PARAM_SEPERATOR", "PARAM_TYPE_DEF", "VAR_DEC", "EQUALS",
+			"PKGID", "EOS", "CMTCH", "MCOMO", "MCOMC", "L_VOID", "FUNC_DEF", "CONSTRUCT_DEF",
+			"PRINT", "REQUIRE", "STATICFUNC", "MEMBER_CT", "MEMBER_T", "CONSTRUCTOR",
+			"ATTRIBUTE_DEF", "Const", "TRANSIENT", "STATICATTRIBUTE", "STRUCT_DEF",
+			"STRUCT_T", "CHAR_ID", "INT_ID", "STR_ID", "DBL_id", "FLT_ID", "BYTE",
+			"SERIALIZABLE", "Compiler_Compile_CMD", "Compiler_cpextend_CMD", "INTEGER",
 		"SIMP_CHAR", "SIMP_CHARS", "BASE_CHARACTER", "BASE_CHARACTERS", "AR_CHARS", 
 		"CHRCT", "BlankLiteral", "StringLiteral", "LINE_COMMENT", "MULTI_COMMENT", 
 		"WS"
@@ -144,7 +150,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(94);
+				setState(102);
 			match(SIMP_CHARS);
 			}
 		}
@@ -183,7 +189,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(96);
+				setState(104);
 			_la = _input.LA(1);
 			if ( !(_la==SIMP_CHARS || _la==BASE_CHARACTERS) ) {
 			_errHandler.recoverInline(this);
@@ -233,9 +239,9 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(98);
+				setState(106);
 			mid();
-				setState(99);
+				setState(107);
 			call_params();
 			}
 		}
@@ -276,18 +282,18 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(104);
+				setState(112);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case SIMP_CHARS:
 				{
-					setState(101);
+					setState(109);
 				match(SIMP_CHARS);
 				}
 				break;
 			case AR_CHARS:
 				{
-					setState(102);
+					setState(110);
 				match(AR_CHARS);
 				}
 				break;
@@ -298,7 +304,7 @@ public class RegnaParser extends Parser {
 			case FLT_ID:
 			case BYTE:
 				{
-					setState(103);
+					setState(111);
 				type_id();
 				}
 				break;
@@ -346,7 +352,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(106);
+				setState(114);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << CHAR_ID) | (1L << INT_ID) | (1L << STR_ID) | (1L << DBL_id) | (1L << FLT_ID) | (1L << BYTE))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -395,7 +401,7 @@ public class RegnaParser extends Parser {
 		Ret_typeContext _localctx = new Ret_typeContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_ret_type);
 		try {
-			setState(111);
+			setState(119);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case CHAR_ID:
@@ -406,21 +412,21 @@ public class RegnaParser extends Parser {
 			case BYTE:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(108);
+					setState(116);
 				type_id();
 				}
 				break;
 			case SIMP_CHARS:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(109);
+					setState(117);
 				id();
 				}
 				break;
 			case L_VOID:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(110);
+					setState(118);
 				match(L_VOID);
 				}
 				break;
@@ -461,7 +467,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(113);
+				setState(121);
 			_la = _input.LA(1);
 			if ( !(_la==T__0 || _la==T__1) ) {
 			_errHandler.recoverInline(this);
@@ -506,7 +512,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(115);
+				setState(123);
 			_la = _input.LA(1);
 			if ( !(_la==T__2 || _la==T__3) ) {
 			_errHandler.recoverInline(this);
@@ -574,15 +580,15 @@ public class RegnaParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(122);
+				setState(130);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__0:
 			case T__1:
 				{
-					setState(118);
+					setState(126);
 				add();
-					setState(119);
+					setState(127);
 				value();
 				}
 				break;
@@ -590,7 +596,7 @@ public class RegnaParser extends Parser {
 			case INTEGER:
 			case SIMP_CHARS:
 				{
-					setState(121);
+					setState(129);
 				value();
 				}
 				break;
@@ -598,7 +604,7 @@ public class RegnaParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-				setState(134);
+				setState(142);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -606,18 +612,18 @@ public class RegnaParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-						setState(132);
+						setState(140);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 					case 1:
 						{
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-							setState(124);
+							setState(132);
 						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-							setState(125);
+							setState(133);
 						mult();
-							setState(126);
+							setState(134);
 						expr(4);
 						}
 						break;
@@ -625,18 +631,18 @@ public class RegnaParser extends Parser {
 						{
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-							setState(128);
+							setState(136);
 						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-							setState(129);
+							setState(137);
 						add();
-							setState(130);
+							setState(138);
 						expr(3);
 						}
 						break;
 					}
 					} 
 				}
-				setState(136);
+				setState(144);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			}
@@ -681,31 +687,31 @@ public class RegnaParser extends Parser {
 		ValueContext _localctx = new ValueContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_value);
 		try {
-			setState(143);
+			setState(151);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case SIMP_CHARS:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(137);
+					setState(145);
 				id();
 				}
 				break;
 			case INTEGER:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(138);
+					setState(146);
 				match(INTEGER);
 				}
 				break;
 			case LPRM:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(139);
+					setState(147);
 				match(LPRM);
-					setState(140);
+					setState(148);
 				expr(0);
-					setState(141);
+					setState(149);
 				match(RPRM);
 				}
 				break;
@@ -748,7 +754,7 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(145);
+				setState(153);
 			_la = _input.LA(1);
 			if ( !(_la==Const || _la==TRANSIENT) ) {
 			_errHandler.recoverInline(this);
@@ -800,34 +806,34 @@ public class RegnaParser extends Parser {
 		Box_typesContext _localctx = new Box_typesContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_box_types);
 		try {
-			setState(151);
+			setState(159);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(147);
+					setState(155);
 				match(StringLiteral);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(148);
+					setState(156);
 				id();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(149);
+					setState(157);
 				mid();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-					setState(150);
+					setState(158);
 				call_mid();
 				}
 				break;
@@ -870,9 +876,12 @@ public class RegnaParser extends Parser {
 		public Struct_valContext struct_val() {
 			return getRuleContext(Struct_valContext.class,0);
 		}
-
 		public Cast_typeContext cast_type() {
 			return getRuleContext(Cast_typeContext.class, 0);
+		}
+
+		public Construct_callContext construct_call() {
+			return getRuleContext(Construct_callContext.class, 0);
 		}
 		public TypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -892,91 +901,98 @@ public class RegnaParser extends Parser {
 		TypeContext _localctx = new TypeContext(_ctx, getState());
 		enterRule(_localctx, 24, RULE_type);
 		try {
-			setState(165);
+			setState(174);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(153);
+					setState(161);
 				match(CHRCT);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(154);
+					setState(162);
 				match(INTEGER);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(155);
+					setState(163);
 				match(StringLiteral);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-					setState(156);
+					setState(164);
 				match(BlankLiteral);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-					setState(157);
+					setState(165);
 				id();
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-					setState(158);
+					setState(166);
 				expr(0);
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-					setState(159);
+					setState(167);
 				member_rule();
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-					setState(160);
+					setState(168);
 				internal_call();
 				}
 				break;
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-					setState(161);
+					setState(169);
 				mid();
 				}
 				break;
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
-					setState(162);
+					setState(170);
 				call_mid();
 				}
 				break;
 			case 11:
 				enterOuterAlt(_localctx, 11);
 				{
-					setState(163);
+					setState(171);
 				struct_val();
 				}
 				break;
 				case 12:
 					enterOuterAlt(_localctx, 12);
 				{
-					setState(164);
+					setState(172);
 					cast_type();
+				}
+				break;
+				case 13:
+					enterOuterAlt(_localctx, 13);
+				{
+					setState(173);
+					construct_call();
 				}
 				break;
 			}
@@ -1020,27 +1036,27 @@ public class RegnaParser extends Parser {
 		VartypeContext _localctx = new VartypeContext(_ctx, getState());
 		enterRule(_localctx, 26, RULE_vartype);
 		try {
-			setState(170);
+			setState(179);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(167);
+					setState(176);
 				type_id();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(168);
+					setState(177);
 				id();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(169);
+					setState(178);
 				mid();
 				}
 				break;
@@ -1087,15 +1103,15 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(172);
+				setState(181);
 			match(VAR_DEC);
-				setState(173);
+				setState(182);
 			id();
-				setState(174);
+				setState(183);
 			match(EQUALS);
-				setState(175);
+				setState(184);
 			type();
-				setState(176);
+				setState(185);
 			match(EOS);
 			}
 		}
@@ -1144,33 +1160,33 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(178);
+				setState(187);
 			match(ATTRIBUTE_DEF);
-				setState(180);
+				setState(189);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==Const) {
 				{
-					setState(179);
+					setState(188);
 				match(Const);
 				}
 			}
 
-				setState(182);
+				setState(191);
 			vartype();
-				setState(183);
+				setState(192);
 			id();
-				setState(185);
+				setState(194);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==EQUALS) {
 				{
-					setState(184);
+					setState(193);
 				attrvaldef();
 				}
 			}
 
-				setState(187);
+				setState(196);
 			match(EOS);
 			}
 		}
@@ -1211,11 +1227,11 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(189);
+				setState(198);
 			match(PRINT);
-				setState(190);
+				setState(199);
 			type();
-				setState(191);
+				setState(200);
 			match(EOS);
 			}
 		}
@@ -1260,15 +1276,15 @@ public class RegnaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(193);
+				setState(202);
 			box_types();
-				setState(194);
+				setState(203);
 			match(MEMBER_CT);
-				setState(195);
+				setState(204);
 			match(CONSTRUCTOR);
-				setState(196);
+				setState(205);
 			call_params();
-				setState(197);
+				setState(206);
 			match(EOS);
 			}
 		}
@@ -1278,6 +1294,68 @@ public class RegnaParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Construct_callContext extends ParserRuleContext {
+		public Box_typesContext box_types() {
+			return getRuleContext(Box_typesContext.class, 0);
+		}
+
+		public TerminalNode MEMBER_CT() {
+			return getToken(RegnaParser.MEMBER_CT, 0);
+		}
+
+		public TerminalNode CONSTRUCTOR() {
+			return getToken(RegnaParser.CONSTRUCTOR, 0);
+		}
+
+		public Call_paramsContext call_params() {
+			return getRuleContext(Call_paramsContext.class, 0);
+		}
+
+		public Construct_callContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_construct_call;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterConstruct_call(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitConstruct_call(this);
+		}
+	}
+
+	public final Construct_callContext construct_call() throws RecognitionException {
+		Construct_callContext _localctx = new Construct_callContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_construct_call);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(208);
+				box_types();
+				setState(209);
+				match(MEMBER_CT);
+				setState(210);
+				match(CONSTRUCTOR);
+				setState(211);
+				call_params();
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
 			exitRule();
 		}
 		return _localctx;
@@ -1304,14 +1382,14 @@ public class RegnaParser extends Parser {
 
 	public final AttrvaldefContext attrvaldef() throws RecognitionException {
 		AttrvaldefContext _localctx = new AttrvaldefContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_attrvaldef);
+		enterRule(_localctx, 38, RULE_attrvaldef);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-				setState(199);
+				setState(213);
 			match(EQUALS);
-				setState(200);
+				setState(214);
 			type();
 			}
 			}
@@ -1361,48 +1439,48 @@ public class RegnaParser extends Parser {
 
 	public final Attrdef_stmtContext attrdef_stmt() throws RecognitionException {
 		Attrdef_stmtContext _localctx = new Attrdef_stmtContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_attrdef_stmt);
+		enterRule(_localctx, 40, RULE_attrdef_stmt);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(202);
+				setState(216);
 			match(ATTRIBUTE_DEF);
-				setState(204);
+				setState(218);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 			case 1:
 				{
-					setState(203);
+					setState(217);
 				field_param();
 				}
 				break;
 			}
-				setState(207);
+				setState(221);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==Const || _la==TRANSIENT) {
 				{
-					setState(206);
+					setState(220);
 				field_param();
 				}
 			}
 
-				setState(209);
+				setState(223);
 			vartype();
-				setState(210);
+				setState(224);
 			id();
-				setState(212);
+				setState(226);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==EQUALS) {
 				{
-					setState(211);
+					setState(225);
 				attrvaldef();
 				}
 			}
 
-				setState(214);
+				setState(228);
 			match(EOS);
 			}
 		}
@@ -1451,48 +1529,48 @@ public class RegnaParser extends Parser {
 
 	public final Static_attrdefContext static_attrdef() throws RecognitionException {
 		Static_attrdefContext _localctx = new Static_attrdefContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_static_attrdef);
+		enterRule(_localctx, 42, RULE_static_attrdef);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(216);
+				setState(230);
 			match(STATICATTRIBUTE);
-				setState(218);
+				setState(232);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 			case 1:
 				{
-					setState(217);
+					setState(231);
 				field_param();
 				}
 				break;
 			}
-				setState(221);
+				setState(235);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==Const || _la==TRANSIENT) {
 				{
-					setState(220);
+					setState(234);
 				field_param();
 				}
 			}
 
-				setState(223);
+				setState(237);
 			vartype();
-				setState(224);
+				setState(238);
 			id();
-				setState(226);
+				setState(240);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==EQUALS) {
 				{
-					setState(225);
+					setState(239);
 				attrvaldef();
 				}
 			}
 
-				setState(228);
+				setState(242);
 			match(EOS);
 			}
 		}
@@ -1529,15 +1607,15 @@ public class RegnaParser extends Parser {
 
 	public final RequireContext require() throws RecognitionException {
 		RequireContext _localctx = new RequireContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_require);
+		enterRule(_localctx, 44, RULE_require);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(230);
+				setState(244);
 			match(REQUIRE);
-				setState(231);
+				setState(245);
 			mid();
-				setState(232);
+				setState(246);
 			match(EOS);
 			}
 		}
@@ -1581,45 +1659,45 @@ public class RegnaParser extends Parser {
 
 	public final Call_paramsContext call_params() throws RecognitionException {
 		Call_paramsContext _localctx = new Call_paramsContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_call_params);
+		enterRule(_localctx, 46, RULE_call_params);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(234);
+				setState(248);
 			match(LPRM);
-				setState(236);
+				setState(250);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LPRM) | (1L << STRUCT_T) | (1L << INTEGER) | (1L << SIMP_CHARS) | (1L << BASE_CHARACTERS) | (1L << CHRCT) | (1L << BlankLiteral) | (1L << StringLiteral))) != 0)) {
 				{
-					setState(235);
+					setState(249);
 				type();
 				}
 			}
 
-				setState(242);
+				setState(256);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-						setState(238);
+						setState(252);
 					match(PARAM_SEPERATOR);
 					{
-						setState(239);
+						setState(253);
 						type();
 					}
 					}
-					}
+					} 
 				}
-				setState(244);
+				setState(258);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
 			}
-				setState(245);
+				setState(259);
 			match(RPRM);
 			}
 		}
@@ -1662,19 +1740,19 @@ public class RegnaParser extends Parser {
 
 	public final Membercall_stmtContext membercall_stmt() throws RecognitionException {
 		Membercall_stmtContext _localctx = new Membercall_stmtContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_membercall_stmt);
+		enterRule(_localctx, 48, RULE_membercall_stmt);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(247);
+				setState(261);
 			type();
-				setState(248);
+				setState(262);
 			match(MEMBER_CT);
-				setState(249);
+				setState(263);
 			id();
-				setState(250);
+				setState(264);
 			call_params();
-				setState(251);
+				setState(265);
 			match(EOS);
 			}
 		}
@@ -1716,17 +1794,17 @@ public class RegnaParser extends Parser {
 
 	public final Internal_callContext internal_call() throws RecognitionException {
 		Internal_callContext _localctx = new Internal_callContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_internal_call);
+		enterRule(_localctx, 50, RULE_internal_call);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(253);
+				setState(267);
 			box_types();
-				setState(254);
+				setState(268);
 			match(MEMBER_CT);
-				setState(255);
+				setState(269);
 			id();
-				setState(256);
+				setState(270);
 			call_params();
 			}
 		}
@@ -1765,15 +1843,15 @@ public class RegnaParser extends Parser {
 
 	public final Member_ruleContext member_rule() throws RecognitionException {
 		Member_ruleContext _localctx = new Member_ruleContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_member_rule);
+		enterRule(_localctx, 52, RULE_member_rule);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(258);
+				setState(272);
 			mid();
-				setState(259);
+				setState(273);
 			match(MEMBER_T);
-				setState(260);
+				setState(274);
 			id();
 			}
 		}
@@ -1792,7 +1870,6 @@ public class RegnaParser extends Parser {
 		public TerminalNode LPRM() {
 			return getToken(RegnaParser.LPRM, 0);
 		}
-
 		public Extract_typeContext extract_type() {
 			return getRuleContext(Extract_typeContext.class, 0);
 		}
@@ -1800,11 +1877,9 @@ public class RegnaParser extends Parser {
 		public TerminalNode RPRM() {
 			return getToken(RegnaParser.RPRM, 0);
 		}
-
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class, 0);
 		}
-
 		public Cast_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1813,12 +1888,10 @@ public class RegnaParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_cast_type;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterCast_type(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitCast_type(this);
@@ -1827,17 +1900,17 @@ public class RegnaParser extends Parser {
 
 	public final Cast_typeContext cast_type() throws RecognitionException {
 		Cast_typeContext _localctx = new Cast_typeContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_cast_type);
+		enterRule(_localctx, 54, RULE_cast_type);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(262);
+				setState(276);
 				match(LPRM);
-				setState(263);
+				setState(277);
 				extract_type();
-				setState(264);
+				setState(278);
 				match(RPRM);
-				setState(265);
+				setState(279);
 				type();
 			}
 		} catch (RecognitionException re) {
@@ -1883,30 +1956,30 @@ public class RegnaParser extends Parser {
 
 	public final Struct_bodyContext struct_body() throws RecognitionException {
 		Struct_bodyContext _localctx = new Struct_bodyContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_struct_body);
+		enterRule(_localctx, 56, RULE_struct_body);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(267);
+				setState(281);
 			type_id();
-				setState(268);
+				setState(282);
 			id();
-				setState(273);
+				setState(287);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-					setState(269);
+					setState(283);
 				match(PARAM_SEPERATOR);
-					setState(270);
+					setState(284);
 				type_id();
-					setState(271);
+					setState(285);
 				id();
 				}
 				}
-				setState(275); 
+				setState(289); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==PARAM_SEPERATOR );
@@ -1950,30 +2023,30 @@ public class RegnaParser extends Parser {
 
 	public final Struct_stmtContext struct_stmt() throws RecognitionException {
 		Struct_stmtContext _localctx = new Struct_stmtContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_struct_stmt);
+		enterRule(_localctx, 58, RULE_struct_stmt);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(277);
+				setState(291);
 			match(STRUCT_DEF);
-				setState(278);
+				setState(292);
 			id();
-				setState(279);
+				setState(293);
 			match(LBRC);
-				setState(281);
+				setState(295);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << CHAR_ID) | (1L << INT_ID) | (1L << STR_ID) | (1L << DBL_id) | (1L << FLT_ID) | (1L << BYTE))) != 0)) {
 				{
-					setState(280);
+					setState(294);
 				struct_body();
 				}
 			}
 
-				setState(283);
+				setState(297);
 			match(RBRC);
-				setState(284);
+				setState(298);
 			match(EOS);
 			}
 		}
@@ -2011,13 +2084,13 @@ public class RegnaParser extends Parser {
 
 	public final Struct_paramContext struct_param() throws RecognitionException {
 		Struct_paramContext _localctx = new Struct_paramContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_struct_param);
+		enterRule(_localctx, 60, RULE_struct_param);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(286);
+				setState(300);
 			id();
-				setState(287);
+				setState(301);
 			type();
 			}
 		}
@@ -2069,54 +2142,54 @@ public class RegnaParser extends Parser {
 
 	public final Struct_init_stmtContext struct_init_stmt() throws RecognitionException {
 		Struct_init_stmtContext _localctx = new Struct_init_stmtContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_struct_init_stmt);
+		enterRule(_localctx, 62, RULE_struct_init_stmt);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(289);
+				setState(303);
 			match(STRUCT_T);
-				setState(290);
-			mid();
-				setState(291);
-			match(CONSTRUCTOR);
-				setState(292);
-			id();
-				setState(293);
-			match(LBRC);
 				setState(304);
+			mid();
+				setState(305);
+				match(T__4);
+				setState(306);
+			id();
+				setState(307);
+			match(LBRC);
+				setState(318);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==SIMP_CHARS) {
 				{
 				{
-					setState(294);
+					setState(308);
 				struct_param();
-					setState(299);
+					setState(313);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==PARAM_SEPERATOR) {
 					{
 					{
-						setState(295);
+						setState(309);
 					match(PARAM_SEPERATOR);
-						setState(296);
+						setState(310);
 					struct_param();
 					}
 					}
-					setState(301);
+					setState(315);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 				}
-				setState(306);
+				setState(320);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-				setState(307);
+				setState(321);
 			match(RBRC);
-				setState(308);
+				setState(322);
 			match(EOS);
 			}
 		}
@@ -2135,11 +2208,9 @@ public class RegnaParser extends Parser {
 		public MidContext mid() {
 			return getRuleContext(MidContext.class, 0);
 		}
-
 		public Type_idContext type_id() {
 			return getRuleContext(Type_idContext.class, 0);
 		}
-
 		public Extract_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2148,12 +2219,10 @@ public class RegnaParser extends Parser {
 		public int getRuleIndex() {
 			return RULE_extract_type;
 		}
-
 		@Override
 		public void enterRule(ParseTreeListener listener) {
 			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterExtract_type(this);
 		}
-
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitExtract_type(this);
@@ -2162,16 +2231,16 @@ public class RegnaParser extends Parser {
 
 	public final Extract_typeContext extract_type() throws RecognitionException {
 		Extract_typeContext _localctx = new Extract_typeContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_extract_type);
+		enterRule(_localctx, 64, RULE_extract_type);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(312);
+				setState(326);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 					case SIMP_CHARS:
 					case BASE_CHARACTERS: {
-						setState(310);
+						setState(324);
 						mid();
 					}
 					break;
@@ -2181,7 +2250,7 @@ public class RegnaParser extends Parser {
 					case DBL_id:
 					case FLT_ID:
 					case BYTE: {
-						setState(311);
+						setState(325);
 						type_id();
 					}
 					break;
@@ -2208,7 +2277,6 @@ public class RegnaParser extends Parser {
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
-
 		public Extract_typeContext extract_type() {
 			return getRuleContext(Extract_typeContext.class, 0);
 		}
@@ -2228,26 +2296,26 @@ public class RegnaParser extends Parser {
 
 	public final Struct_valContext struct_val() throws RecognitionException {
 		Struct_valContext _localctx = new Struct_valContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_struct_val);
+		enterRule(_localctx, 66, RULE_struct_val);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(314);
+				setState(328);
 			match(STRUCT_T);
-				setState(315);
+				setState(329);
 			mid();
-				setState(316);
+				setState(330);
 			match(MEMBER_T);
-				setState(318);
+				setState(332);
 				_errHandler.sync(this);
 				switch (getInterpreter().adaptivePredict(_input, 24, _ctx)) {
 					case 1: {
-						setState(317);
+						setState(331);
 						extract_type();
 					}
 					break;
 				}
-				setState(320);
+				setState(334);
 			id();
 			}
 		}
@@ -2291,21 +2359,21 @@ public class RegnaParser extends Parser {
 
 	public final Struct_set_stmtContext struct_set_stmt() throws RecognitionException {
 		Struct_set_stmtContext _localctx = new Struct_set_stmtContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_struct_set_stmt);
+		enterRule(_localctx, 68, RULE_struct_set_stmt);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(322);
+				setState(336);
 			match(STRUCT_T);
-				setState(323);
+				setState(337);
 			match(VAR_DEC);
-				setState(324);
+				setState(338);
 			mid();
-				setState(325);
+				setState(339);
 			id();
-				setState(326);
+				setState(340);
 			match(EQUALS);
-				setState(327);
+				setState(341);
 			type();
 			}
 		}
@@ -2361,64 +2429,64 @@ public class RegnaParser extends Parser {
 
 	public final StmtContext stmt() throws RecognitionException {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_stmt);
+		enterRule(_localctx, 70, RULE_stmt);
 		try {
-			setState(337);
+			setState(351);
 			_errHandler.sync(this);
 			switch (getInterpreter().adaptivePredict(_input, 25, _ctx)) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(329);
+					setState(343);
 				vardef_stmt();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(330);
+					setState(344);
 				print_stmt();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(331);
+					setState(345);
 				localvar_stmt();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-					setState(332);
+					setState(346);
 				membercall_stmt();
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-					setState(333);
+					setState(347);
 				construct_stmt();
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-					setState(334);
+					setState(348);
 				struct_init_stmt();
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-					setState(335);
+					setState(349);
 				struct_stmt();
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-					setState(336);
+					setState(350);
 				struct_set_stmt();
 				}
 				break;
@@ -2435,12 +2503,219 @@ public class RegnaParser extends Parser {
 		return _localctx;
 	}
 
+	public static class Compiler_compile_instructionContext extends ParserRuleContext {
+		public TerminalNode Compiler_Compile_CMD() {
+			return getToken(RegnaParser.Compiler_Compile_CMD, 0);
+		}
+
+		public TerminalNode EOS() {
+			return getToken(RegnaParser.EOS, 0);
+		}
+
+		public Compiler_compile_instructionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_compiler_compile_instruction;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterCompiler_compile_instruction(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitCompiler_compile_instruction(this);
+		}
+	}
+
+	public final Compiler_compile_instructionContext compiler_compile_instruction() throws RecognitionException {
+		Compiler_compile_instructionContext _localctx = new Compiler_compile_instructionContext(_ctx, getState());
+		enterRule(_localctx, 72, RULE_compiler_compile_instruction);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(353);
+				match(T__5);
+				setState(354);
+				match(Compiler_Compile_CMD);
+				setState(358);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input, 26, _ctx);
+				while (_alt != 1 && _alt != org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER) {
+					if (_alt == 1 + 1) {
+						{
+							{
+								setState(355);
+								matchWildcard();
+							}
+						}
+					}
+					setState(360);
+					_errHandler.sync(this);
+					_alt = getInterpreter().adaptivePredict(_input, 26, _ctx);
+				}
+				setState(361);
+				match(EOS);
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Compiler_cp_instructionContext extends ParserRuleContext {
+		public TerminalNode Compiler_cpextend_CMD() {
+			return getToken(RegnaParser.Compiler_cpextend_CMD, 0);
+		}
+
+		public TerminalNode EOS() {
+			return getToken(RegnaParser.EOS, 0);
+		}
+
+		public Compiler_cp_instructionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_compiler_cp_instruction;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterCompiler_cp_instruction(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitCompiler_cp_instruction(this);
+		}
+	}
+
+	public final Compiler_cp_instructionContext compiler_cp_instruction() throws RecognitionException {
+		Compiler_cp_instructionContext _localctx = new Compiler_cp_instructionContext(_ctx, getState());
+		enterRule(_localctx, 74, RULE_compiler_cp_instruction);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(363);
+				match(T__5);
+				setState(364);
+				match(Compiler_cpextend_CMD);
+				setState(368);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input, 27, _ctx);
+				while (_alt != 1 && _alt != org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER) {
+					if (_alt == 1 + 1) {
+						{
+							{
+								setState(365);
+								matchWildcard();
+							}
+						}
+					}
+					setState(370);
+					_errHandler.sync(this);
+					_alt = getInterpreter().adaptivePredict(_input, 27, _ctx);
+				}
+				setState(371);
+				match(EOS);
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Compiler_instructionContext extends ParserRuleContext {
+		public Compiler_compile_instructionContext compiler_compile_instruction() {
+			return getRuleContext(Compiler_compile_instructionContext.class, 0);
+		}
+
+		public Compiler_cp_instructionContext compiler_cp_instruction() {
+			return getRuleContext(Compiler_cp_instructionContext.class, 0);
+		}
+
+		public Compiler_instructionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_compiler_instruction;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).enterCompiler_instruction(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof RegnaListener) ((RegnaListener) listener).exitCompiler_instruction(this);
+		}
+	}
+
+	public final Compiler_instructionContext compiler_instruction() throws RecognitionException {
+		Compiler_instructionContext _localctx = new Compiler_instructionContext(_ctx, getState());
+		enterRule(_localctx, 76, RULE_compiler_instruction);
+		try {
+			setState(375);
+			_errHandler.sync(this);
+			switch (getInterpreter().adaptivePredict(_input, 28, _ctx)) {
+				case 1:
+					enterOuterAlt(_localctx, 1);
+				{
+					setState(373);
+					compiler_compile_instruction();
+				}
+				break;
+				case 2:
+					enterOuterAlt(_localctx, 2);
+				{
+					setState(374);
+					compiler_cp_instruction();
+				}
+				break;
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
 	public static class RequireListContext extends ParserRuleContext {
 		public List<RequireContext> require() {
 			return getRuleContexts(RequireContext.class);
 		}
 		public RequireContext require(int i) {
 			return getRuleContext(RequireContext.class,i);
+		}
+
+		public List<Compiler_instructionContext> compiler_instruction() {
+			return getRuleContexts(Compiler_instructionContext.class);
+		}
+
+		public Compiler_instructionContext compiler_instruction(int i) {
+			return getRuleContext(Compiler_instructionContext.class, i);
 		}
 		public RequireListContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2458,25 +2733,37 @@ public class RegnaParser extends Parser {
 
 	public final RequireListContext requireList() throws RecognitionException {
 		RequireListContext _localctx = new RequireListContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_requireList);
+		enterRule(_localctx, 78, RULE_requireList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(340);
+				setState(379);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
-				{
-					setState(339);
-				require();
+					setState(379);
+					_errHandler.sync(this);
+					switch (_input.LA(1)) {
+						case REQUIRE: {
+							setState(377);
+							require();
+						}
+						break;
+						case T__5: {
+							setState(378);
+							compiler_instruction();
+						}
+						break;
+						default:
+							throw new NoViableAltException(this);
+					}
 				}
-				}
-				setState(342); 
+				setState(381); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==REQUIRE );
+			} while (_la == T__5 || _la == REQUIRE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2513,22 +2800,22 @@ public class RegnaParser extends Parser {
 
 	public final StmtListContext stmtList() throws RecognitionException {
 		StmtListContext _localctx = new StmtListContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_stmtList);
+		enterRule(_localctx, 80, RULE_stmtList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(345);
+				setState(384);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-					setState(344);
+					setState(383);
 				stmt();
 				}
 				}
-				setState(347); 
+				setState(386); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LPRM) | (1L << VAR_DEC) | (1L << PRINT) | (1L << ATTRIBUTE_DEF) | (1L << STRUCT_DEF) | (1L << STRUCT_T) | (1L << INTEGER) | (1L << SIMP_CHARS) | (1L << BASE_CHARACTERS) | (1L << CHRCT) | (1L << BlankLiteral) | (1L << StringLiteral))) != 0) );
@@ -2569,15 +2856,15 @@ public class RegnaParser extends Parser {
 
 	public final FormalParamContext formalParam() throws RecognitionException {
 		FormalParamContext _localctx = new FormalParamContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_formalParam);
+		enterRule(_localctx, 82, RULE_formalParam);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(349);
+				setState(388);
 			id();
-				setState(350);
+				setState(389);
 			match(PARAM_TYPE_DEF);
-				setState(351);
+				setState(390);
 			arid();
 			}
 		}
@@ -2621,32 +2908,32 @@ public class RegnaParser extends Parser {
 
 	public final FormalParamListContext formalParamList() throws RecognitionException {
 		FormalParamListContext _localctx = new FormalParamListContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_formalParamList);
+		enterRule(_localctx, 84, RULE_formalParamList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(353);
+				setState(392);
 			match(LPRM);
-				setState(354);
+				setState(393);
 			formalParam();
-				setState(359);
+				setState(398);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==PARAM_SEPERATOR) {
 				{
 				{
-					setState(355);
+					setState(394);
 				match(PARAM_SEPERATOR);
-					setState(356);
+					setState(395);
 				formalParam();
 				}
 				}
-				setState(361);
+				setState(400);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-				setState(362);
+				setState(401);
 			match(RPRM);
 			}
 		}
@@ -2693,40 +2980,40 @@ public class RegnaParser extends Parser {
 
 	public final StaticformalFunctionContext staticformalFunction() throws RecognitionException {
 		StaticformalFunctionContext _localctx = new StaticformalFunctionContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_staticformalFunction);
+		enterRule(_localctx, 86, RULE_staticformalFunction);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(364);
+				setState(403);
 			match(STATICFUNC);
-				setState(365);
+				setState(404);
 			ret_type();
-				setState(366);
+				setState(405);
 			id();
-				setState(368);
+				setState(407);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPRM) {
 				{
-					setState(367);
+					setState(406);
 				formalParamList();
 				}
 			}
 
-				setState(370);
+				setState(409);
 			match(LBRC);
-				setState(372);
+				setState(411);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LPRM) | (1L << VAR_DEC) | (1L << PRINT) | (1L << ATTRIBUTE_DEF) | (1L << STRUCT_DEF) | (1L << STRUCT_T) | (1L << INTEGER) | (1L << SIMP_CHARS) | (1L << BASE_CHARACTERS) | (1L << CHRCT) | (1L << BlankLiteral) | (1L << StringLiteral))) != 0)) {
 				{
-					setState(371);
+					setState(410);
 				stmtList();
 				}
 			}
 
-				setState(374);
+				setState(413);
 			match(RBRC);
 			}
 		}
@@ -2773,40 +3060,40 @@ public class RegnaParser extends Parser {
 
 	public final FuncContext func() throws RecognitionException {
 		FuncContext _localctx = new FuncContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_func);
+		enterRule(_localctx, 88, RULE_func);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(376);
+				setState(415);
 			match(FUNC_DEF);
-				setState(377);
+				setState(416);
 			ret_type();
-				setState(378);
+				setState(417);
 			id();
-				setState(380);
+				setState(419);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPRM) {
 				{
-					setState(379);
+					setState(418);
 				formalParamList();
 				}
 			}
 
-				setState(382);
+				setState(421);
 			match(LBRC);
-				setState(384);
+				setState(423);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LPRM) | (1L << VAR_DEC) | (1L << PRINT) | (1L << ATTRIBUTE_DEF) | (1L << STRUCT_DEF) | (1L << STRUCT_T) | (1L << INTEGER) | (1L << SIMP_CHARS) | (1L << BASE_CHARACTERS) | (1L << CHRCT) | (1L << BlankLiteral) | (1L << StringLiteral))) != 0)) {
 				{
-					setState(383);
+					setState(422);
 				stmtList();
 				}
 			}
 
-				setState(386);
+				setState(425);
 			match(RBRC);
 			}
 		}
@@ -2847,36 +3134,36 @@ public class RegnaParser extends Parser {
 
 	public final ConstructorContext constructor() throws RecognitionException {
 		ConstructorContext _localctx = new ConstructorContext(_ctx, getState());
-		enterRule(_localctx, 82, RULE_constructor);
+		enterRule(_localctx, 90, RULE_constructor);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(388);
+				setState(427);
 			match(CONSTRUCT_DEF);
-				setState(390);
+				setState(429);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPRM) {
 				{
-					setState(389);
+					setState(428);
 				formalParamList();
 				}
 			}
 
-				setState(392);
+				setState(431);
 			match(LBRC);
-				setState(394);
+				setState(433);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LPRM) | (1L << VAR_DEC) | (1L << PRINT) | (1L << ATTRIBUTE_DEF) | (1L << STRUCT_DEF) | (1L << STRUCT_T) | (1L << INTEGER) | (1L << SIMP_CHARS) | (1L << BASE_CHARACTERS) | (1L << CHRCT) | (1L << BlankLiteral) | (1L << StringLiteral))) != 0)) {
 				{
-					setState(393);
+					setState(432);
 				stmtList();
 				}
 			}
 
-				setState(396);
+				setState(435);
 			match(RBRC);
 			}
 		}
@@ -2920,28 +3207,28 @@ public class RegnaParser extends Parser {
 
 	public final FunctionListContext functionList() throws RecognitionException {
 		FunctionListContext _localctx = new FunctionListContext(_ctx, getState());
-		enterRule(_localctx, 84, RULE_functionList);
+		enterRule(_localctx, 92, RULE_functionList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(400);
+				setState(439);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
-					setState(400);
+					setState(439);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 				case FUNC_DEF:
 					{
-						setState(398);
+						setState(437);
 					func();
 					}
 					break;
 				case STATICFUNC:
 					{
-						setState(399);
+						setState(438);
 					staticformalFunction();
 					}
 					break;
@@ -2949,7 +3236,7 @@ public class RegnaParser extends Parser {
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(402); 
+				setState(441); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==FUNC_DEF || _la==STATICFUNC );
@@ -2995,29 +3282,29 @@ public class RegnaParser extends Parser {
 
 	public final AttributesContext attributes() throws RecognitionException {
 		AttributesContext _localctx = new AttributesContext(_ctx, getState());
-		enterRule(_localctx, 86, RULE_attributes);
+		enterRule(_localctx, 94, RULE_attributes);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(408);
+				setState(447);
 			_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input, 38, _ctx);
+				_alt = getInterpreter().adaptivePredict(_input, 42, _ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
-						setState(406);
+						setState(445);
 					_errHandler.sync(this);
 					switch (_input.LA(1)) {
 					case ATTRIBUTE_DEF:
 						{
-							setState(404);
+							setState(443);
 						attrdef_stmt();
 						}
 						break;
 					case STATICATTRIBUTE:
 						{
-							setState(405);
+							setState(444);
 						static_attrdef();
 						}
 						break;
@@ -3026,9 +3313,9 @@ public class RegnaParser extends Parser {
 					}
 					} 
 				}
-				setState(410);
+				setState(449);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input, 38, _ctx);
+				_alt = getInterpreter().adaptivePredict(_input, 42, _ctx);
 			}
 			}
 		}
@@ -3069,21 +3356,29 @@ public class RegnaParser extends Parser {
 
 	public final ModuleBodyContext moduleBody() throws RecognitionException {
 		ModuleBodyContext _localctx = new ModuleBodyContext(_ctx, getState());
-		enterRule(_localctx, 88, RULE_moduleBody);
+		enterRule(_localctx, 96, RULE_moduleBody);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(411);
+				setState(450);
 			attributes();
-				setState(412);
-			constructor();
-				setState(414);
+				setState(452);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la == CONSTRUCT_DEF) {
+					{
+						setState(451);
+						constructor();
+					}
+				}
+
+				setState(455);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==FUNC_DEF || _la==STATICFUNC) {
 				{
-					setState(413);
+					setState(454);
 				functionList();
 				}
 			}
@@ -3132,34 +3427,34 @@ public class RegnaParser extends Parser {
 
 	public final ModuleContext module() throws RecognitionException {
 		ModuleContext _localctx = new ModuleContext(_ctx, getState());
-		enterRule(_localctx, 90, RULE_module);
+		enterRule(_localctx, 98, RULE_module);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(416);
+				setState(457);
 			match(MODULE_DEC);
-				setState(417);
+				setState(458);
 			id();
-				setState(418);
+				setState(459);
 			match(PKGID);
-				setState(419);
+				setState(460);
 			mid();
-				setState(421);
+				setState(462);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==SERIALIZABLE) {
 				{
-					setState(420);
+					setState(461);
 				match(SERIALIZABLE);
 				}
 			}
 
-				setState(423);
+				setState(464);
 			match(LBRC);
-				setState(424);
+				setState(465);
 			moduleBody();
-				setState(425);
+				setState(466);
 			match(RBRC);
 			}
 		}
@@ -3200,32 +3495,32 @@ public class RegnaParser extends Parser {
 
 	public final ProgramContext program() throws RecognitionException {
 		ProgramContext _localctx = new ProgramContext(_ctx, getState());
-		enterRule(_localctx, 92, RULE_program);
+		enterRule(_localctx, 100, RULE_program);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(428);
+				setState(469);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==REQUIRE) {
+				if (_la == T__5 || _la == REQUIRE) {
 				{
-					setState(427);
+					setState(468);
 				requireList();
 				}
 			}
 
-				setState(431);
+				setState(472);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-					setState(430);
+					setState(471);
 				module();
 				}
 				}
-				setState(433); 
+				setState(474); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==MODULE_DEC );
@@ -3260,160 +3555,178 @@ public class RegnaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-			"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\66\u01b6\4\2\t\2" +
-		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
-		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
+			"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3:\u01df\4\2\t\2\4" +
+					"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t" +
+					"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22" +
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\4\37\t\37\4 \t \4!"+
 		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4"+
-					",\t,\4-\t-\4.\t.\4/\t/\4\60\t\60\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3\5\3\5\3" +
-					"\5\5\5k\n\5\3\6\3\6\3\7\3\7\3\7\5\7r\n\7\3\b\3\b\3\t\3\t\3\n\3\n\3\n\3" +
-					"\n\3\n\5\n}\n\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\7\n\u0087\n\n\f\n\16\n" +
-					"\u008a\13\n\3\13\3\13\3\13\3\13\3\13\3\13\5\13\u0092\n\13\3\f\3\f\3\r" +
-					"\3\r\3\r\3\r\5\r\u009a\n\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16" +
-					"\3\16\3\16\3\16\5\16\u00a8\n\16\3\17\3\17\3\17\5\17\u00ad\n\17\3\20\3" +
-					"\20\3\20\3\20\3\20\3\20\3\21\3\21\5\21\u00b7\n\21\3\21\3\21\3\21\5\21" +
-					"\u00bc\n\21\3\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\23" +
-					"\3\24\3\24\3\24\3\25\3\25\5\25\u00cf\n\25\3\25\5\25\u00d2\n\25\3\25\3" +
-					"\25\3\25\5\25\u00d7\n\25\3\25\3\25\3\26\3\26\5\26\u00dd\n\26\3\26\5\26" +
-					"\u00e0\n\26\3\26\3\26\3\26\5\26\u00e5\n\26\3\26\3\26\3\27\3\27\3\27\3" +
-					"\27\3\30\3\30\5\30\u00ef\n\30\3\30\3\30\7\30\u00f3\n\30\f\30\16\30\u00f6" +
-					"\13\30\3\30\3\30\3\31\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\32\3\32\3\32" +
-					"\3\33\3\33\3\33\3\33\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35\3\35\3\35" +
-					"\3\35\6\35\u0114\n\35\r\35\16\35\u0115\3\36\3\36\3\36\3\36\5\36\u011c" +
-					"\n\36\3\36\3\36\3\36\3\37\3\37\3\37\3 \3 \3 \3 \3 \3 \3 \3 \7 \u012c\n" +
-					" \f \16 \u012f\13 \7 \u0131\n \f \16 \u0134\13 \3 \3 \3 \3!\3!\5!\u013b" +
-					"\n!\3\"\3\"\3\"\3\"\5\"\u0141\n\"\3\"\3\"\3#\3#\3#\3#\3#\3#\3#\3$\3$\3" +
-					"$\3$\3$\3$\3$\3$\5$\u0154\n$\3%\6%\u0157\n%\r%\16%\u0158\3&\6&\u015c\n" +
-					"&\r&\16&\u015d\3\'\3\'\3\'\3\'\3(\3(\3(\3(\7(\u0168\n(\f(\16(\u016b\13" +
-					"(\3(\3(\3)\3)\3)\3)\5)\u0173\n)\3)\3)\5)\u0177\n)\3)\3)\3*\3*\3*\3*\5" +
-					"*\u017f\n*\3*\3*\5*\u0183\n*\3*\3*\3+\3+\5+\u0189\n+\3+\3+\5+\u018d\n" +
-					"+\3+\3+\3,\3,\6,\u0193\n,\r,\16,\u0194\3-\3-\7-\u0199\n-\f-\16-\u019c" +
-					"\13-\3.\3.\3.\5.\u01a1\n.\3/\3/\3/\3/\3/\5/\u01a8\n/\3/\3/\3/\3/\3\60" +
-					"\5\60\u01af\n\60\3\60\6\60\u01b2\n\60\r\60\16\60\u01b3\3\60\4\u00f4\u019a" +
-					"\3\22\61\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668" +
-					":<>@BDFHJLNPRTVXZ\\^\2\7\4\2--//\3\2$)\3\2\3\4\3\2\5\6\3\2\37 \2\u01c7" +
-					"\2`\3\2\2\2\4b\3\2\2\2\6d\3\2\2\2\bj\3\2\2\2\nl\3\2\2\2\fq\3\2\2\2\16" +
-					"s\3\2\2\2\20u\3\2\2\2\22|\3\2\2\2\24\u0091\3\2\2\2\26\u0093\3\2\2\2\30" +
-					"\u0099\3\2\2\2\32\u00a7\3\2\2\2\34\u00ac\3\2\2\2\36\u00ae\3\2\2\2 \u00b4" +
-					"\3\2\2\2\"\u00bf\3\2\2\2$\u00c3\3\2\2\2&\u00c9\3\2\2\2(\u00cc\3\2\2\2" +
-					"*\u00da\3\2\2\2,\u00e8\3\2\2\2.\u00ec\3\2\2\2\60\u00f9\3\2\2\2\62\u00ff" +
-					"\3\2\2\2\64\u0104\3\2\2\2\66\u0108\3\2\2\28\u010d\3\2\2\2:\u0117\3\2\2" +
-					"\2<\u0120\3\2\2\2>\u0123\3\2\2\2@\u013a\3\2\2\2B\u013c\3\2\2\2D\u0144" +
-					"\3\2\2\2F\u0153\3\2\2\2H\u0156\3\2\2\2J\u015b\3\2\2\2L\u015f\3\2\2\2N" +
-					"\u0163\3\2\2\2P\u016e\3\2\2\2R\u017a\3\2\2\2T\u0186\3\2\2\2V\u0192\3\2" +
-					"\2\2X\u019a\3\2\2\2Z\u019d\3\2\2\2\\\u01a2\3\2\2\2^\u01ae\3\2\2\2`a\7" +
-					"-\2\2a\3\3\2\2\2bc\t\2\2\2c\5\3\2\2\2de\5\4\3\2ef\5.\30\2f\7\3\2\2\2g" +
-					"k\7-\2\2hk\7\60\2\2ik\5\n\6\2jg\3\2\2\2jh\3\2\2\2ji\3\2\2\2k\t\3\2\2\2" +
-					"lm\t\3\2\2m\13\3\2\2\2nr\5\n\6\2or\5\2\2\2pr\7\25\2\2qn\3\2\2\2qo\3\2" +
-					"\2\2qp\3\2\2\2r\r\3\2\2\2st\t\4\2\2t\17\3\2\2\2uv\t\5\2\2v\21\3\2\2\2" +
-					"wx\b\n\1\2xy\5\16\b\2yz\5\24\13\2z}\3\2\2\2{}\5\24\13\2|w\3\2\2\2|{\3" +
-					"\2\2\2}\u0088\3\2\2\2~\177\f\5\2\2\177\u0080\5\20\t\2\u0080\u0081\5\22" +
-					"\n\6\u0081\u0087\3\2\2\2\u0082\u0083\f\4\2\2\u0083\u0084\5\16\b\2\u0084" +
-					"\u0085\5\22\n\5\u0085\u0087\3\2\2\2\u0086~\3\2\2\2\u0086\u0082\3\2\2\2" +
-					"\u0087\u008a\3\2\2\2\u0088\u0086\3\2\2\2\u0088\u0089\3\2\2\2\u0089\23" +
-					"\3\2\2\2\u008a\u0088\3\2\2\2\u008b\u0092\5\2\2\2\u008c\u0092\7+\2\2\u008d" +
-					"\u008e\7\n\2\2\u008e\u008f\5\22\n\2\u008f\u0090\7\13\2\2\u0090\u0092\3" +
-					"\2\2\2\u0091\u008b\3\2\2\2\u0091\u008c\3\2\2\2\u0091\u008d\3\2\2\2\u0092" +
-					"\25\3\2\2\2\u0093\u0094\t\6\2\2\u0094\27\3\2\2\2\u0095\u009a\7\63\2\2" +
-					"\u0096\u009a\5\2\2\2\u0097\u009a\5\4\3\2\u0098\u009a\5\6\4\2\u0099\u0095" +
-					"\3\2\2\2\u0099\u0096\3\2\2\2\u0099\u0097\3\2\2\2\u0099\u0098\3\2\2\2\u009a" +
-					"\31\3\2\2\2\u009b\u00a8\7\61\2\2\u009c\u00a8\7+\2\2\u009d\u00a8\7\63\2" +
-					"\2\u009e\u00a8\7\62\2\2\u009f\u00a8\5\2\2\2\u00a0\u00a8\5\22\n\2\u00a1" +
-					"\u00a8\5\64\33\2\u00a2\u00a8\5\62\32\2\u00a3\u00a8\5\4\3\2\u00a4\u00a8" +
-					"\5\6\4\2\u00a5\u00a8\5B\"\2\u00a6\u00a8\5\66\34\2\u00a7\u009b\3\2\2\2" +
-					"\u00a7\u009c\3\2\2\2\u00a7\u009d\3\2\2\2\u00a7\u009e\3\2\2\2\u00a7\u009f" +
-					"\3\2\2\2\u00a7\u00a0\3\2\2\2\u00a7\u00a1\3\2\2\2\u00a7\u00a2\3\2\2\2\u00a7" +
-					"\u00a3\3\2\2\2\u00a7\u00a4\3\2\2\2\u00a7\u00a5\3\2\2\2\u00a7\u00a6\3\2" +
-					"\2\2\u00a8\33\3\2\2\2\u00a9\u00ad\5\n\6\2\u00aa\u00ad\5\2\2\2\u00ab\u00ad" +
-					"\5\4\3\2\u00ac\u00a9\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ab\3\2\2\2\u00ad" +
-					"\35\3\2\2\2\u00ae\u00af\7\16\2\2\u00af\u00b0\5\2\2\2\u00b0\u00b1\7\17" +
-					"\2\2\u00b1\u00b2\5\32\16\2\u00b2\u00b3\7\21\2\2\u00b3\37\3\2\2\2\u00b4" +
-					"\u00b6\7\36\2\2\u00b5\u00b7\7\37\2\2\u00b6\u00b5\3\2\2\2\u00b6\u00b7\3" +
-					"\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\u00b9\5\34\17\2\u00b9\u00bb\5\2\2\2\u00ba" +
-					"\u00bc\5&\24\2\u00bb\u00ba\3\2\2\2\u00bb\u00bc\3\2\2\2\u00bc\u00bd\3\2" +
-					"\2\2\u00bd\u00be\7\21\2\2\u00be!\3\2\2\2\u00bf\u00c0\7\30\2\2\u00c0\u00c1" +
-					"\5\32\16\2\u00c1\u00c2\7\21\2\2\u00c2#\3\2\2\2\u00c3\u00c4\5\30\r\2\u00c4" +
-					"\u00c5\7\33\2\2\u00c5\u00c6\7\35\2\2\u00c6\u00c7\5.\30\2\u00c7\u00c8\7" +
-					"\21\2\2\u00c8%\3\2\2\2\u00c9\u00ca\7\17\2\2\u00ca\u00cb\5\32\16\2\u00cb" +
-					"\'\3\2\2\2\u00cc\u00ce\7\36\2\2\u00cd\u00cf\5\26\f\2\u00ce\u00cd\3\2\2" +
-					"\2\u00ce\u00cf\3\2\2\2\u00cf\u00d1\3\2\2\2\u00d0\u00d2\5\26\f\2\u00d1" +
-					"\u00d0\3\2\2\2\u00d1\u00d2\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\u00d4\5\34" +
-					"\17\2\u00d4\u00d6\5\2\2\2\u00d5\u00d7\5&\24\2\u00d6\u00d5\3\2\2\2\u00d6" +
-					"\u00d7\3\2\2\2\u00d7\u00d8\3\2\2\2\u00d8\u00d9\7\21\2\2\u00d9)\3\2\2\2" +
-					"\u00da\u00dc\7!\2\2\u00db\u00dd\5\26\f\2\u00dc\u00db\3\2\2\2\u00dc\u00dd" +
-					"\3\2\2\2\u00dd\u00df\3\2\2\2\u00de\u00e0\5\26\f\2\u00df\u00de\3\2\2\2" +
-					"\u00df\u00e0\3\2\2\2\u00e0\u00e1\3\2\2\2\u00e1\u00e2\5\34\17\2\u00e2\u00e4" +
-					"\5\2\2\2\u00e3\u00e5\5&\24\2\u00e4\u00e3\3\2\2\2\u00e4\u00e5\3\2\2\2\u00e5" +
-					"\u00e6\3\2\2\2\u00e6\u00e7\7\21\2\2\u00e7+\3\2\2\2\u00e8\u00e9\7\31\2" +
-					"\2\u00e9\u00ea\5\4\3\2\u00ea\u00eb\7\21\2\2\u00eb-\3\2\2\2\u00ec\u00ee" +
-					"\7\n\2\2\u00ed\u00ef\5\32\16\2\u00ee\u00ed\3\2\2\2\u00ee\u00ef\3\2\2\2" +
-					"\u00ef\u00f4\3\2\2\2\u00f0\u00f1\7\f\2\2\u00f1\u00f3\5\32\16\2\u00f2\u00f0" +
-					"\3\2\2\2\u00f3\u00f6\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f4\u00f2\3\2\2\2\u00f5" +
-					"\u00f7\3\2\2\2\u00f6\u00f4\3\2\2\2\u00f7\u00f8\7\13\2\2\u00f8/\3\2\2\2" +
-					"\u00f9\u00fa\5\32\16\2\u00fa\u00fb\7\33\2\2\u00fb\u00fc\5\2\2\2\u00fc" +
-					"\u00fd\5.\30\2\u00fd\u00fe\7\21\2\2\u00fe\61\3\2\2\2\u00ff\u0100\5\30" +
-					"\r\2\u0100\u0101\7\33\2\2\u0101\u0102\5\2\2\2\u0102\u0103\5.\30\2\u0103" +
-					"\63\3\2\2\2\u0104\u0105\5\4\3\2\u0105\u0106\7\34\2\2\u0106\u0107\5\2\2" +
-					"\2\u0107\65\3\2\2\2\u0108\u0109\7\n\2\2\u0109\u010a\5@!\2\u010a\u010b" +
-					"\7\13\2\2\u010b\u010c\5\32\16\2\u010c\67\3\2\2\2\u010d\u010e\5\n\6\2\u010e" +
-					"\u0113\5\2\2\2\u010f\u0110\7\f\2\2\u0110\u0111\5\n\6\2\u0111\u0112\5\2" +
-					"\2\2\u0112\u0114\3\2\2\2\u0113\u010f\3\2\2\2\u0114\u0115\3\2\2\2\u0115" +
-					"\u0113\3\2\2\2\u0115\u0116\3\2\2\2\u01169\3\2\2\2\u0117\u0118\7\"\2\2" +
-					"\u0118\u0119\5\2\2\2\u0119\u011b\7\b\2\2\u011a\u011c\58\35\2\u011b\u011a" +
-					"\3\2\2\2\u011b\u011c\3\2\2\2\u011c\u011d\3\2\2\2\u011d\u011e\7\t\2\2\u011e" +
-					"\u011f\7\21\2\2\u011f;\3\2\2\2\u0120\u0121\5\2\2\2\u0121\u0122\5\32\16" +
-					"\2\u0122=\3\2\2\2\u0123\u0124\7#\2\2\u0124\u0125\5\4\3\2\u0125\u0126\7" +
-					"\35\2\2\u0126\u0127\5\2\2\2\u0127\u0132\7\b\2\2\u0128\u012d\5<\37\2\u0129" +
-					"\u012a\7\f\2\2\u012a\u012c\5<\37\2\u012b\u0129\3\2\2\2\u012c\u012f\3\2" +
-					"\2\2\u012d\u012b\3\2\2\2\u012d\u012e\3\2\2\2\u012e\u0131\3\2\2\2\u012f" +
-					"\u012d\3\2\2\2\u0130\u0128\3\2\2\2\u0131\u0134\3\2\2\2\u0132\u0130\3\2" +
-					"\2\2\u0132\u0133\3\2\2\2\u0133\u0135\3\2\2\2\u0134\u0132\3\2\2\2\u0135" +
-					"\u0136\7\t\2\2\u0136\u0137\7\21\2\2\u0137?\3\2\2\2\u0138\u013b\5\4\3\2" +
-					"\u0139\u013b\5\n\6\2\u013a\u0138\3\2\2\2\u013a\u0139\3\2\2\2\u013bA\3" +
-					"\2\2\2\u013c\u013d\7#\2\2\u013d\u013e\5\4\3\2\u013e\u0140\7\34\2\2\u013f" +
-					"\u0141\5@!\2\u0140\u013f\3\2\2\2\u0140\u0141\3\2\2\2\u0141\u0142\3\2\2" +
-					"\2\u0142\u0143\5\2\2\2\u0143C\3\2\2\2\u0144\u0145\7#\2\2\u0145\u0146\7" +
-					"\16\2\2\u0146\u0147\5\4\3\2\u0147\u0148\5\2\2\2\u0148\u0149\7\17\2\2\u0149" +
-					"\u014a\5\32\16\2\u014aE\3\2\2\2\u014b\u0154\5\36\20\2\u014c\u0154\5\"" +
-					"\22\2\u014d\u0154\5 \21\2\u014e\u0154\5\60\31\2\u014f\u0154\5$\23\2\u0150" +
-					"\u0154\5> \2\u0151\u0154\5:\36\2\u0152\u0154\5D#\2\u0153\u014b\3\2\2\2" +
-					"\u0153\u014c\3\2\2\2\u0153\u014d\3\2\2\2\u0153\u014e\3\2\2\2\u0153\u014f" +
-					"\3\2\2\2\u0153\u0150\3\2\2\2\u0153\u0151\3\2\2\2\u0153\u0152\3\2\2\2\u0154" +
-					"G\3\2\2\2\u0155\u0157\5,\27\2\u0156\u0155\3\2\2\2\u0157\u0158\3\2\2\2" +
-					"\u0158\u0156\3\2\2\2\u0158\u0159\3\2\2\2\u0159I\3\2\2\2\u015a\u015c\5" +
-					"F$\2\u015b\u015a\3\2\2\2\u015c\u015d\3\2\2\2\u015d\u015b\3\2\2\2\u015d" +
-					"\u015e\3\2\2\2\u015eK\3\2\2\2\u015f\u0160\5\2\2\2\u0160\u0161\7\r\2\2" +
-					"\u0161\u0162\5\b\5\2\u0162M\3\2\2\2\u0163\u0164\7\n\2\2\u0164\u0169\5" +
-					"L\'\2\u0165\u0166\7\f\2\2\u0166\u0168\5L\'\2\u0167\u0165\3\2\2\2\u0168" +
-					"\u016b\3\2\2\2\u0169\u0167\3\2\2\2\u0169\u016a\3\2\2\2\u016a\u016c\3\2" +
-					"\2\2\u016b\u0169\3\2\2\2\u016c\u016d\7\13\2\2\u016dO\3\2\2\2\u016e\u016f" +
-					"\7\32\2\2\u016f\u0170\5\f\7\2\u0170\u0172\5\2\2\2\u0171\u0173\5N(\2\u0172" +
-					"\u0171\3\2\2\2\u0172\u0173\3\2\2\2\u0173\u0174\3\2\2\2\u0174\u0176\7\b" +
-					"\2\2\u0175\u0177\5J&\2\u0176\u0175\3\2\2\2\u0176\u0177\3\2\2\2\u0177\u0178" +
-					"\3\2\2\2\u0178\u0179\7\t\2\2\u0179Q\3\2\2\2\u017a\u017b\7\26\2\2\u017b" +
-					"\u017c\5\f\7\2\u017c\u017e\5\2\2\2\u017d\u017f\5N(\2\u017e\u017d\3\2\2" +
-					"\2\u017e\u017f\3\2\2\2\u017f\u0180\3\2\2\2\u0180\u0182\7\b\2\2\u0181\u0183" +
-					"\5J&\2\u0182\u0181\3\2\2\2\u0182\u0183\3\2\2\2\u0183\u0184\3\2\2\2\u0184" +
-					"\u0185\7\t\2\2\u0185S\3\2\2\2\u0186\u0188\7\27\2\2\u0187\u0189\5N(\2\u0188" +
-					"\u0187\3\2\2\2\u0188\u0189\3\2\2\2\u0189\u018a\3\2\2\2\u018a\u018c\7\b" +
-					"\2\2\u018b\u018d\5J&\2\u018c\u018b\3\2\2\2\u018c\u018d\3\2\2\2\u018d\u018e" +
-					"\3\2\2\2\u018e\u018f\7\t\2\2\u018fU\3\2\2\2\u0190\u0193\5R*\2\u0191\u0193" +
-					"\5P)\2\u0192\u0190\3\2\2\2\u0192\u0191\3\2\2\2\u0193\u0194\3\2\2\2\u0194" +
-					"\u0192\3\2\2\2\u0194\u0195\3\2\2\2\u0195W\3\2\2\2\u0196\u0199\5(\25\2" +
-					"\u0197\u0199\5*\26\2\u0198\u0196\3\2\2\2\u0198\u0197\3\2\2\2\u0199\u019c" +
-					"\3\2\2\2\u019a\u019b\3\2\2\2\u019a\u0198\3\2\2\2\u019bY\3\2\2\2\u019c" +
-					"\u019a\3\2\2\2\u019d\u019e\5X-\2\u019e\u01a0\5T+\2\u019f\u01a1\5V,\2\u01a0" +
-					"\u019f\3\2\2\2\u01a0\u01a1\3\2\2\2\u01a1[\3\2\2\2\u01a2\u01a3\7\7\2\2" +
-					"\u01a3\u01a4\5\2\2\2\u01a4\u01a5\7\20\2\2\u01a5\u01a7\5\4\3\2\u01a6\u01a8" +
-					"\7*\2\2\u01a7\u01a6\3\2\2\2\u01a7\u01a8\3\2\2\2\u01a8\u01a9\3\2\2\2\u01a9" +
-					"\u01aa\7\b\2\2\u01aa\u01ab\5Z.\2\u01ab\u01ac\7\t\2\2\u01ac]\3\2\2\2\u01ad" +
-					"\u01af\5H%\2\u01ae\u01ad\3\2\2\2\u01ae\u01af\3\2\2\2\u01af\u01b1\3\2\2" +
-					"\2\u01b0\u01b2\5\\/\2\u01b1\u01b0\3\2\2\2\u01b2\u01b3\3\2\2\2\u01b3\u01b1" +
-					"\3\2\2\2\u01b3\u01b4\3\2\2\2\u01b4_\3\2\2\2-jq|\u0086\u0088\u0091\u0099" +
-					"\u00a7\u00ac\u00b6\u00bb\u00ce\u00d1\u00d6\u00dc\u00df\u00e4\u00ee\u00f4" +
-					"\u0115\u011b\u012d\u0132\u013a\u0140\u0153\u0158\u015d\u0169\u0172\u0176" +
-					"\u017e\u0182\u0188\u018c\u0192\u0194\u0198\u019a\u01a0\u01a7\u01ae\u01b3";
+					",\t,\4-\t-\4.\t.\4/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t" +
+					"\64\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3\5\3\5\3\5\5\5s\n\5\3\6\3\6\3\7\3\7\3" +
+					"\7\5\7z\n\7\3\b\3\b\3\t\3\t\3\n\3\n\3\n\3\n\3\n\5\n\u0085\n\n\3\n\3\n" +
+					"\3\n\3\n\3\n\3\n\3\n\3\n\7\n\u008f\n\n\f\n\16\n\u0092\13\n\3\13\3\13\3" +
+					"\13\3\13\3\13\3\13\5\13\u009a\n\13\3\f\3\f\3\r\3\r\3\r\3\r\5\r\u00a2\n" +
+					"\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\5" +
+					"\16\u00b1\n\16\3\17\3\17\3\17\5\17\u00b6\n\17\3\20\3\20\3\20\3\20\3\20" +
+					"\3\20\3\21\3\21\5\21\u00c0\n\21\3\21\3\21\3\21\5\21\u00c5\n\21\3\21\3" +
+					"\21\3\22\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\23\3\24\3\24\3\24\3" +
+					"\24\3\24\3\25\3\25\3\25\3\26\3\26\5\26\u00dd\n\26\3\26\5\26\u00e0\n\26" +
+					"\3\26\3\26\3\26\5\26\u00e5\n\26\3\26\3\26\3\27\3\27\5\27\u00eb\n\27\3" +
+					"\27\5\27\u00ee\n\27\3\27\3\27\3\27\5\27\u00f3\n\27\3\27\3\27\3\30\3\30" +
+					"\3\30\3\30\3\31\3\31\5\31\u00fd\n\31\3\31\3\31\7\31\u0101\n\31\f\31\16" +
+					"\31\u0104\13\31\3\31\3\31\3\32\3\32\3\32\3\32\3\32\3\32\3\33\3\33\3\33" +
+					"\3\33\3\33\3\34\3\34\3\34\3\34\3\35\3\35\3\35\3\35\3\35\3\36\3\36\3\36" +
+					"\3\36\3\36\3\36\6\36\u0122\n\36\r\36\16\36\u0123\3\37\3\37\3\37\3\37\5" +
+					"\37\u012a\n\37\3\37\3\37\3\37\3 \3 \3 \3!\3!\3!\3!\3!\3!\3!\3!\7!\u013a" +
+					"\n!\f!\16!\u013d\13!\7!\u013f\n!\f!\16!\u0142\13!\3!\3!\3!\3\"\3\"\5\"" +
+					"\u0149\n\"\3#\3#\3#\3#\5#\u014f\n#\3#\3#\3$\3$\3$\3$\3$\3$\3$\3%\3%\3" +
+					"%\3%\3%\3%\3%\3%\5%\u0162\n%\3&\3&\3&\7&\u0167\n&\f&\16&\u016a\13&\3&" +
+					"\3&\3\'\3\'\3\'\7\'\u0171\n\'\f\'\16\'\u0174\13\'\3\'\3\'\3(\3(\5(\u017a" +
+					"\n(\3)\3)\6)\u017e\n)\r)\16)\u017f\3*\6*\u0183\n*\r*\16*\u0184\3+\3+\3" +
+					"+\3+\3,\3,\3,\3,\7,\u018f\n,\f,\16,\u0192\13,\3,\3,\3-\3-\3-\3-\5-\u019a" +
+					"\n-\3-\3-\5-\u019e\n-\3-\3-\3.\3.\3.\3.\5.\u01a6\n.\3.\3.\5.\u01aa\n." +
+					"\3.\3.\3/\3/\5/\u01b0\n/\3/\3/\5/\u01b4\n/\3/\3/\3\60\3\60\6\60\u01ba" +
+					"\n\60\r\60\16\60\u01bb\3\61\3\61\7\61\u01c0\n\61\f\61\16\61\u01c3\13\61" +
+					"\3\62\3\62\5\62\u01c7\n\62\3\62\5\62\u01ca\n\62\3\63\3\63\3\63\3\63\3" +
+					"\63\5\63\u01d1\n\63\3\63\3\63\3\63\3\63\3\64\5\64\u01d8\n\64\3\64\6\64" +
+					"\u01db\n\64\r\64\16\64\u01dc\3\64\6\u0102\u0168\u0172\u01c1\3\22\65\2" +
+					"\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJL" +
+					"NPRTVXZ\\^`bdf\2\7\4\2\61\61\63\63\3\2&+\3\2\3\4\3\2\5\6\3\2!\"\2\u01f2" +
+					"\2h\3\2\2\2\4j\3\2\2\2\6l\3\2\2\2\br\3\2\2\2\nt\3\2\2\2\fy\3\2\2\2\16" +
+					"{\3\2\2\2\20}\3\2\2\2\22\u0084\3\2\2\2\24\u0099\3\2\2\2\26\u009b\3\2\2" +
+					"\2\30\u00a1\3\2\2\2\32\u00b0\3\2\2\2\34\u00b5\3\2\2\2\36\u00b7\3\2\2\2" +
+					" \u00bd\3\2\2\2\"\u00c8\3\2\2\2$\u00cc\3\2\2\2&\u00d2\3\2\2\2(\u00d7\3" +
+					"\2\2\2*\u00da\3\2\2\2,\u00e8\3\2\2\2.\u00f6\3\2\2\2\60\u00fa\3\2\2\2\62" +
+					"\u0107\3\2\2\2\64\u010d\3\2\2\2\66\u0112\3\2\2\28\u0116\3\2\2\2:\u011b" +
+					"\3\2\2\2<\u0125\3\2\2\2>\u012e\3\2\2\2@\u0131\3\2\2\2B\u0148\3\2\2\2D" +
+					"\u014a\3\2\2\2F\u0152\3\2\2\2H\u0161\3\2\2\2J\u0163\3\2\2\2L\u016d\3\2" +
+					"\2\2N\u0179\3\2\2\2P\u017d\3\2\2\2R\u0182\3\2\2\2T\u0186\3\2\2\2V\u018a" +
+					"\3\2\2\2X\u0195\3\2\2\2Z\u01a1\3\2\2\2\\\u01ad\3\2\2\2^\u01b9\3\2\2\2" +
+					"`\u01c1\3\2\2\2b\u01c4\3\2\2\2d\u01cb\3\2\2\2f\u01d7\3\2\2\2hi\7\61\2" +
+					"\2i\3\3\2\2\2jk\t\2\2\2k\5\3\2\2\2lm\5\4\3\2mn\5\60\31\2n\7\3\2\2\2os" +
+					"\7\61\2\2ps\7\64\2\2qs\5\n\6\2ro\3\2\2\2rp\3\2\2\2rq\3\2\2\2s\t\3\2\2" +
+					"\2tu\t\3\2\2u\13\3\2\2\2vz\5\n\6\2wz\5\2\2\2xz\7\27\2\2yv\3\2\2\2yw\3" +
+					"\2\2\2yx\3\2\2\2z\r\3\2\2\2{|\t\4\2\2|\17\3\2\2\2}~\t\5\2\2~\21\3\2\2" +
+					"\2\177\u0080\b\n\1\2\u0080\u0081\5\16\b\2\u0081\u0082\5\24\13\2\u0082" +
+					"\u0085\3\2\2\2\u0083\u0085\5\24\13\2\u0084\177\3\2\2\2\u0084\u0083\3\2" +
+					"\2\2\u0085\u0090\3\2\2\2\u0086\u0087\f\5\2\2\u0087\u0088\5\20\t\2\u0088" +
+					"\u0089\5\22\n\6\u0089\u008f\3\2\2\2\u008a\u008b\f\4\2\2\u008b\u008c\5" +
+					"\16\b\2\u008c\u008d\5\22\n\5\u008d\u008f\3\2\2\2\u008e\u0086\3\2\2\2\u008e" +
+					"\u008a\3\2\2\2\u008f\u0092\3\2\2\2\u0090\u008e\3\2\2\2\u0090\u0091\3\2" +
+					"\2\2\u0091\23\3\2\2\2\u0092\u0090\3\2\2\2\u0093\u009a\5\2\2\2\u0094\u009a" +
+					"\7/\2\2\u0095\u0096\7\f\2\2\u0096\u0097\5\22\n\2\u0097\u0098\7\r\2\2\u0098" +
+					"\u009a\3\2\2\2\u0099\u0093\3\2\2\2\u0099\u0094\3\2\2\2\u0099\u0095\3\2" +
+					"\2\2\u009a\25\3\2\2\2\u009b\u009c\t\6\2\2\u009c\27\3\2\2\2\u009d\u00a2" +
+					"\7\67\2\2\u009e\u00a2\5\2\2\2\u009f\u00a2\5\4\3\2\u00a0\u00a2\5\6\4\2" +
+					"\u00a1\u009d\3\2\2\2\u00a1\u009e\3\2\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a0" +
+					"\3\2\2\2\u00a2\31\3\2\2\2\u00a3\u00b1\7\65\2\2\u00a4\u00b1\7/\2\2\u00a5" +
+					"\u00b1\7\67\2\2\u00a6\u00b1\7\66\2\2\u00a7\u00b1\5\2\2\2\u00a8\u00b1\5" +
+					"\22\n\2\u00a9\u00b1\5\66\34\2\u00aa\u00b1\5\64\33\2\u00ab\u00b1\5\4\3" +
+					"\2\u00ac\u00b1\5\6\4\2\u00ad\u00b1\5D#\2\u00ae\u00b1\58\35\2\u00af\u00b1" +
+					"\5&\24\2\u00b0\u00a3\3\2\2\2\u00b0\u00a4\3\2\2\2\u00b0\u00a5\3\2\2\2\u00b0" +
+					"\u00a6\3\2\2\2\u00b0\u00a7\3\2\2\2\u00b0\u00a8\3\2\2\2\u00b0\u00a9\3\2" +
+					"\2\2\u00b0\u00aa\3\2\2\2\u00b0\u00ab\3\2\2\2\u00b0\u00ac\3\2\2\2\u00b0" +
+					"\u00ad\3\2\2\2\u00b0\u00ae\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1\33\3\2\2" +
+					"\2\u00b2\u00b6\5\n\6\2\u00b3\u00b6\5\2\2\2\u00b4\u00b6\5\4\3\2\u00b5\u00b2" +
+					"\3\2\2\2\u00b5\u00b3\3\2\2\2\u00b5\u00b4\3\2\2\2\u00b6\35\3\2\2\2\u00b7" +
+					"\u00b8\7\20\2\2\u00b8\u00b9\5\2\2\2\u00b9\u00ba\7\21\2\2\u00ba\u00bb\5" +
+					"\32\16\2\u00bb\u00bc\7\23\2\2\u00bc\37\3\2\2\2\u00bd\u00bf\7 \2\2\u00be" +
+					"\u00c0\7!\2\2\u00bf\u00be\3\2\2\2\u00bf\u00c0\3\2\2\2\u00c0\u00c1\3\2" +
+					"\2\2\u00c1\u00c2\5\34\17\2\u00c2\u00c4\5\2\2\2\u00c3\u00c5\5(\25\2\u00c4" +
+					"\u00c3\3\2\2\2\u00c4\u00c5\3\2\2\2\u00c5\u00c6\3\2\2\2\u00c6\u00c7\7\23" +
+					"\2\2\u00c7!\3\2\2\2\u00c8\u00c9\7\32\2\2\u00c9\u00ca\5\32\16\2\u00ca\u00cb" +
+					"\7\23\2\2\u00cb#\3\2\2\2\u00cc\u00cd\5\30\r\2\u00cd\u00ce\7\35\2\2\u00ce" +
+					"\u00cf\7\37\2\2\u00cf\u00d0\5\60\31\2\u00d0\u00d1\7\23\2\2\u00d1%\3\2" +
+					"\2\2\u00d2\u00d3\5\30\r\2\u00d3\u00d4\7\35\2\2\u00d4\u00d5\7\37\2\2\u00d5" +
+					"\u00d6\5\60\31\2\u00d6\'\3\2\2\2\u00d7\u00d8\7\21\2\2\u00d8\u00d9\5\32" +
+					"\16\2\u00d9)\3\2\2\2\u00da\u00dc\7 \2\2\u00db\u00dd\5\26\f\2\u00dc\u00db" +
+					"\3\2\2\2\u00dc\u00dd\3\2\2\2\u00dd\u00df\3\2\2\2\u00de\u00e0\5\26\f\2" +
+					"\u00df\u00de\3\2\2\2\u00df\u00e0\3\2\2\2\u00e0\u00e1\3\2\2\2\u00e1\u00e2" +
+					"\5\34\17\2\u00e2\u00e4\5\2\2\2\u00e3\u00e5\5(\25\2\u00e4\u00e3\3\2\2\2" +
+					"\u00e4\u00e5\3\2\2\2\u00e5\u00e6\3\2\2\2\u00e6\u00e7\7\23\2\2\u00e7+\3" +
+					"\2\2\2\u00e8\u00ea\7#\2\2\u00e9\u00eb\5\26\f\2\u00ea\u00e9\3\2\2\2\u00ea" +
+					"\u00eb\3\2\2\2\u00eb\u00ed\3\2\2\2\u00ec\u00ee\5\26\f\2\u00ed\u00ec\3" +
+					"\2\2\2\u00ed\u00ee\3\2\2\2\u00ee\u00ef\3\2\2\2\u00ef\u00f0\5\34\17\2\u00f0" +
+					"\u00f2\5\2\2\2\u00f1\u00f3\5(\25\2\u00f2\u00f1\3\2\2\2\u00f2\u00f3\3\2" +
+					"\2\2\u00f3\u00f4\3\2\2\2\u00f4\u00f5\7\23\2\2\u00f5-\3\2\2\2\u00f6\u00f7" +
+					"\7\33\2\2\u00f7\u00f8\5\4\3\2\u00f8\u00f9\7\23\2\2\u00f9/\3\2\2\2\u00fa" +
+					"\u00fc\7\f\2\2\u00fb\u00fd\5\32\16\2\u00fc\u00fb\3\2\2\2\u00fc\u00fd\3" +
+					"\2\2\2\u00fd\u0102\3\2\2\2\u00fe\u00ff\7\16\2\2\u00ff\u0101\5\32\16\2" +
+					"\u0100\u00fe\3\2\2\2\u0101\u0104\3\2\2\2\u0102\u0103\3\2\2\2\u0102\u0100" +
+					"\3\2\2\2\u0103\u0105\3\2\2\2\u0104\u0102\3\2\2\2\u0105\u0106\7\r\2\2\u0106" +
+					"\61\3\2\2\2\u0107\u0108\5\32\16\2\u0108\u0109\7\35\2\2\u0109\u010a\5\2" +
+					"\2\2\u010a\u010b\5\60\31\2\u010b\u010c\7\23\2\2\u010c\63\3\2\2\2\u010d" +
+					"\u010e\5\30\r\2\u010e\u010f\7\35\2\2\u010f\u0110\5\2\2\2\u0110\u0111\5" +
+					"\60\31\2\u0111\65\3\2\2\2\u0112\u0113\5\4\3\2\u0113\u0114\7\36\2\2\u0114" +
+					"\u0115\5\2\2\2\u0115\67\3\2\2\2\u0116\u0117\7\f\2\2\u0117\u0118\5B\"\2" +
+					"\u0118\u0119\7\r\2\2\u0119\u011a\5\32\16\2\u011a9\3\2\2\2\u011b\u011c" +
+					"\5\n\6\2\u011c\u0121\5\2\2\2\u011d\u011e\7\16\2\2\u011e\u011f\5\n\6\2" +
+					"\u011f\u0120\5\2\2\2\u0120\u0122\3\2\2\2\u0121\u011d\3\2\2\2\u0122\u0123" +
+					"\3\2\2\2\u0123\u0121\3\2\2\2\u0123\u0124\3\2\2\2\u0124;\3\2\2\2\u0125" +
+					"\u0126\7$\2\2\u0126\u0127\5\2\2\2\u0127\u0129\7\n\2\2\u0128\u012a\5:\36" +
+					"\2\u0129\u0128\3\2\2\2\u0129\u012a\3\2\2\2\u012a\u012b\3\2\2\2\u012b\u012c" +
+					"\7\13\2\2\u012c\u012d\7\23\2\2\u012d=\3\2\2\2\u012e\u012f\5\2\2\2\u012f" +
+					"\u0130\5\32\16\2\u0130?\3\2\2\2\u0131\u0132\7%\2\2\u0132\u0133\5\4\3\2" +
+					"\u0133\u0134\7\7\2\2\u0134\u0135\5\2\2\2\u0135\u0140\7\n\2\2\u0136\u013b" +
+					"\5> \2\u0137\u0138\7\16\2\2\u0138\u013a\5> \2\u0139\u0137\3\2\2\2\u013a" +
+					"\u013d\3\2\2\2\u013b\u0139\3\2\2\2\u013b\u013c\3\2\2\2\u013c\u013f\3\2" +
+					"\2\2\u013d\u013b\3\2\2\2\u013e\u0136\3\2\2\2\u013f\u0142\3\2\2\2\u0140" +
+					"\u013e\3\2\2\2\u0140\u0141\3\2\2\2\u0141\u0143\3\2\2\2\u0142\u0140\3\2" +
+					"\2\2\u0143\u0144\7\13\2\2\u0144\u0145\7\23\2\2\u0145A\3\2\2\2\u0146\u0149" +
+					"\5\4\3\2\u0147\u0149\5\n\6\2\u0148\u0146\3\2\2\2\u0148\u0147\3\2\2\2\u0149" +
+					"C\3\2\2\2\u014a\u014b\7%\2\2\u014b\u014c\5\4\3\2\u014c\u014e\7\36\2\2" +
+					"\u014d\u014f\5B\"\2\u014e\u014d\3\2\2\2\u014e\u014f\3\2\2\2\u014f\u0150" +
+					"\3\2\2\2\u0150\u0151\5\2\2\2\u0151E\3\2\2\2\u0152\u0153\7%\2\2\u0153\u0154" +
+					"\7\20\2\2\u0154\u0155\5\4\3\2\u0155\u0156\5\2\2\2\u0156\u0157\7\21\2\2" +
+					"\u0157\u0158\5\32\16\2\u0158G\3\2\2\2\u0159\u0162\5\36\20\2\u015a\u0162" +
+					"\5\"\22\2\u015b\u0162\5 \21\2\u015c\u0162\5\62\32\2\u015d\u0162\5$\23" +
+					"\2\u015e\u0162\5@!\2\u015f\u0162\5<\37\2\u0160\u0162\5F$\2\u0161\u0159" +
+					"\3\2\2\2\u0161\u015a\3\2\2\2\u0161\u015b\3\2\2\2\u0161\u015c\3\2\2\2\u0161" +
+					"\u015d\3\2\2\2\u0161\u015e\3\2\2\2\u0161\u015f\3\2\2\2\u0161\u0160\3\2" +
+					"\2\2\u0162I\3\2\2\2\u0163\u0164\7\b\2\2\u0164\u0168\7-\2\2\u0165\u0167" +
+					"\13\2\2\2\u0166\u0165\3\2\2\2\u0167\u016a\3\2\2\2\u0168\u0169\3\2\2\2" +
+					"\u0168\u0166\3\2\2\2\u0169\u016b\3\2\2\2\u016a\u0168\3\2\2\2\u016b\u016c" +
+					"\7\23\2\2\u016cK\3\2\2\2\u016d\u016e\7\b\2\2\u016e\u0172\7.\2\2\u016f" +
+					"\u0171\13\2\2\2\u0170\u016f\3\2\2\2\u0171\u0174\3\2\2\2\u0172\u0173\3" +
+					"\2\2\2\u0172\u0170\3\2\2\2\u0173\u0175\3\2\2\2\u0174\u0172\3\2\2\2\u0175" +
+					"\u0176\7\23\2\2\u0176M\3\2\2\2\u0177\u017a\5J&\2\u0178\u017a\5L\'\2\u0179" +
+					"\u0177\3\2\2\2\u0179\u0178\3\2\2\2\u017aO\3\2\2\2\u017b\u017e\5.\30\2" +
+					"\u017c\u017e\5N(\2\u017d\u017b\3\2\2\2\u017d\u017c\3\2\2\2\u017e\u017f" +
+					"\3\2\2\2\u017f\u017d\3\2\2\2\u017f\u0180\3\2\2\2\u0180Q\3\2\2\2\u0181" +
+					"\u0183\5H%\2\u0182\u0181\3\2\2\2\u0183\u0184\3\2\2\2\u0184\u0182\3\2\2" +
+					"\2\u0184\u0185\3\2\2\2\u0185S\3\2\2\2\u0186\u0187\5\2\2\2\u0187\u0188" +
+					"\7\17\2\2\u0188\u0189\5\b\5\2\u0189U\3\2\2\2\u018a\u018b\7\f\2\2\u018b" +
+					"\u0190\5T+\2\u018c\u018d\7\16\2\2\u018d\u018f\5T+\2\u018e\u018c\3\2\2" +
+					"\2\u018f\u0192\3\2\2\2\u0190\u018e\3\2\2\2\u0190\u0191\3\2\2\2\u0191\u0193" +
+					"\3\2\2\2\u0192\u0190\3\2\2\2\u0193\u0194\7\r\2\2\u0194W\3\2\2\2\u0195" +
+					"\u0196\7\34\2\2\u0196\u0197\5\f\7\2\u0197\u0199\5\2\2\2\u0198\u019a\5" +
+					"V,\2\u0199\u0198\3\2\2\2\u0199\u019a\3\2\2\2\u019a\u019b\3\2\2\2\u019b" +
+					"\u019d\7\n\2\2\u019c\u019e\5R*\2\u019d\u019c\3\2\2\2\u019d\u019e\3\2\2" +
+					"\2\u019e\u019f\3\2\2\2\u019f\u01a0\7\13\2\2\u01a0Y\3\2\2\2\u01a1\u01a2" +
+					"\7\30\2\2\u01a2\u01a3\5\f\7\2\u01a3\u01a5\5\2\2\2\u01a4\u01a6\5V,\2\u01a5" +
+					"\u01a4\3\2\2\2\u01a5\u01a6\3\2\2\2\u01a6\u01a7\3\2\2\2\u01a7\u01a9\7\n" +
+					"\2\2\u01a8\u01aa\5R*\2\u01a9\u01a8\3\2\2\2\u01a9\u01aa\3\2\2\2\u01aa\u01ab" +
+					"\3\2\2\2\u01ab\u01ac\7\13\2\2\u01ac[\3\2\2\2\u01ad\u01af\7\31\2\2\u01ae" +
+					"\u01b0\5V,\2\u01af\u01ae\3\2\2\2\u01af\u01b0\3\2\2\2\u01b0\u01b1\3\2\2" +
+					"\2\u01b1\u01b3\7\n\2\2\u01b2\u01b4\5R*\2\u01b3\u01b2\3\2\2\2\u01b3\u01b4" +
+					"\3\2\2\2\u01b4\u01b5\3\2\2\2\u01b5\u01b6\7\13\2\2\u01b6]\3\2\2\2\u01b7" +
+					"\u01ba\5Z.\2\u01b8\u01ba\5X-\2\u01b9\u01b7\3\2\2\2\u01b9\u01b8\3\2\2\2" +
+					"\u01ba\u01bb\3\2\2\2\u01bb\u01b9\3\2\2\2\u01bb\u01bc\3\2\2\2\u01bc_\3" +
+					"\2\2\2\u01bd\u01c0\5*\26\2\u01be\u01c0\5,\27\2\u01bf\u01bd\3\2\2\2\u01bf" +
+					"\u01be\3\2\2\2\u01c0\u01c3\3\2\2\2\u01c1\u01c2\3\2\2\2\u01c1\u01bf\3\2" +
+					"\2\2\u01c2a\3\2\2\2\u01c3\u01c1\3\2\2\2\u01c4\u01c6\5`\61\2\u01c5\u01c7" +
+					"\5\\/\2\u01c6\u01c5\3\2\2\2\u01c6\u01c7\3\2\2\2\u01c7\u01c9\3\2\2\2\u01c8" +
+					"\u01ca\5^\60\2\u01c9\u01c8\3\2\2\2\u01c9\u01ca\3\2\2\2\u01cac\3\2\2\2" +
+					"\u01cb\u01cc\7\t\2\2\u01cc\u01cd\5\2\2\2\u01cd\u01ce\7\22\2\2\u01ce\u01d0" +
+					"\5\4\3\2\u01cf\u01d1\7,\2\2\u01d0\u01cf\3\2\2\2\u01d0\u01d1\3\2\2\2\u01d1" +
+					"\u01d2\3\2\2\2\u01d2\u01d3\7\n\2\2\u01d3\u01d4\5b\62\2\u01d4\u01d5\7\13" +
+					"\2\2\u01d5e\3\2\2\2\u01d6\u01d8\5P)\2\u01d7\u01d6\3\2\2\2\u01d7\u01d8" +
+					"\3\2\2\2\u01d8\u01da\3\2\2\2\u01d9\u01db\5d\63\2\u01da\u01d9\3\2\2\2\u01db" +
+					"\u01dc\3\2\2\2\u01dc\u01da\3\2\2\2\u01dc\u01dd\3\2\2\2\u01ddg\3\2\2\2" +
+					"\62ry\u0084\u008e\u0090\u0099\u00a1\u00b0\u00b5\u00bf\u00c4\u00dc\u00df" +
+					"\u00e4\u00ea\u00ed\u00f2\u00fc\u0102\u0123\u0129\u013b\u0140\u0148\u014e" +
+					"\u0161\u0168\u0172\u0179\u017d\u017f\u0184\u0190\u0199\u019d\u01a5\u01a9" +
+					"\u01af\u01b3\u01b9\u01bb\u01bf\u01c1\u01c6\u01c9\u01d0\u01d7\u01dc";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -28,7 +28,7 @@ REQUIRE: 'require' | 'REQUIRE';
 STATICFUNC: 'stfc';
 MEMBER_CT: '->';
 MEMBER_T: '=>';
-CONSTRUCTOR: 'init';
+CONSTRUCTOR: 'inst' | 'new';
 ATTRIBUTE_DEF: 'val' | 'VAL';
 Const: 'const' | 'CONST';
 TRANSIENT: 'trns' | 'transient' | 'TRANSIENT';
@@ -42,6 +42,8 @@ DBL_id: 'double';
 FLT_ID: 'float';
 BYTE: 'byte';
 SERIALIZABLE: 'serializable';
+Compiler_Compile_CMD: 'compile';
+Compiler_cpextend_CMD: 'include';
 
 // Some lexer tokens
 INTEGER: DIGIT+;
@@ -87,7 +89,7 @@ value: id
 field_param: Const | TRANSIENT;
 
 box_types: StringLiteral | id | mid | call_mid;
-type: CHRCT | INTEGER | StringLiteral| BlankLiteral | id | expr | member_rule | internal_call | mid | call_mid | struct_val | cast_type;
+type: CHRCT | INTEGER | StringLiteral| BlankLiteral | id | expr | member_rule | internal_call | mid | call_mid | struct_val | cast_type | construct_call;
 
 /**
     Functions go something like this..
@@ -101,6 +103,7 @@ vardef_stmt: VAR_DEC id EQUALS type EOS;
 localvar_stmt: ATTRIBUTE_DEF Const? vartype id attrvaldef? EOS;
 print_stmt: PRINT type EOS;
 construct_stmt: box_types MEMBER_CT CONSTRUCTOR call_params EOS;
+construct_call: box_types MEMBER_CT CONSTRUCTOR call_params;
 attrvaldef: (EQUALS type);
 attrdef_stmt: ATTRIBUTE_DEF field_param? field_param? vartype id attrvaldef? EOS;
 static_attrdef: STATICATTRIBUTE field_param? field_param? vartype id attrvaldef? EOS;
@@ -131,7 +134,14 @@ stmt
     |struct_set_stmt
     ;
 
-requireList: require+;
+compiler_compile_instruction: '#' Compiler_Compile_CMD .*? EOS;
+compiler_cp_instruction: '#' Compiler_cpextend_CMD .*? EOS;
+compiler_instruction
+    : compiler_compile_instruction
+    | compiler_cp_instruction
+    ;
+
+requireList: (require|compiler_instruction)+;
 stmtList: stmt+;
 
 formalParam: id PARAM_TYPE_DEF arid;
@@ -141,7 +151,7 @@ func: FUNC_DEF ret_type id formalParamList? LBRC stmtList? RBRC;
 constructor: CONSTRUCT_DEF formalParamList? LBRC stmtList? RBRC;
 functionList: (func | staticformalFunction)+;
 attributes: (attrdef_stmt|static_attrdef)*?;
-moduleBody: attributes constructor functionList?;
+moduleBody: attributes constructor? functionList?;
 module: MODULE_DEC id PKGID mid SERIALIZABLE? LBRC moduleBody RBRC;
 program: requireList? module+;
 

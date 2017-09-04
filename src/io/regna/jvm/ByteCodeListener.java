@@ -20,11 +20,11 @@ public class ByteCodeListener extends RegnaBaseListener {
 
     private CtClass module;
 
-    ClassPool cp = ClassPool.getDefault();
-    MethodBuilder methodBuilder;
-    String module_name;
+    private ClassPool cp = ClassPool.getDefault();
+    private MethodBuilder methodBuilder;
+    private String module_name;
 
-    ArrayList<String> interfaces = new ArrayList<>();
+    private ArrayList<String> interfaces = new ArrayList<>();
 
     /** The Constant Logger */
     public static final Logger LOG = Logger.getLogger(ByteCodeListener.class.toGenericString());
@@ -101,10 +101,7 @@ public class ByteCodeListener extends RegnaBaseListener {
         try {
             System.out.println("Generating ByteCode");
             return module.toBytecode();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } catch (CannotCompileException e) {
+        } catch (IOException | CannotCompileException e) {
             e.printStackTrace();
             return null;
         }
@@ -112,12 +109,13 @@ public class ByteCodeListener extends RegnaBaseListener {
 
     /**
      * Save the bytecode into a class in the specified DIRECTORY
-     * @param dir
+     * @param dir The Directory to save to
      */
     public void save(String dir){
         File f = new File(dir,module_name + ".class");
         if(!f.exists()) try {
-            f.createNewFile();
+            final boolean newFile = f.createNewFile();
+            System.out.println(newFile ? "File not created" : "");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -173,6 +171,7 @@ public class ByteCodeListener extends RegnaBaseListener {
         else if(ctx.StringLiteral() != null) return getTerminalText(ctx.StringLiteral());
         else if(ctx.BlankLiteral() != null) return getTerminalText(ctx.BlankLiteral());
         else if (ctx.cast_type() != null) return convertCasting(ctx.cast_type());
+        else if (ctx.construct_call() != null) return convertConstructionStmt(ctx.construct_call());
         else return null;
     }
 
@@ -243,17 +242,13 @@ public class ByteCodeListener extends RegnaBaseListener {
 
     @Override
     public void enterStmtList(RegnaParser.StmtListContext ctx) {
-        ctx.stmt().stream().forEach((stmt) -> {
-            stmt.enterRule(this);
-        });
+        ctx.stmt().forEach((stmt) -> stmt.enterRule(this));
         super.enterStmtList(ctx);
     }
 
     @Override
     public void exitStmtList(RegnaParser.StmtListContext ctx) {
-        ctx.stmt().stream().forEach((stmt) -> {
-            stmt.exitRule(this);
-        });
+        ctx.stmt().forEach((stmt) -> stmt.exitRule(this));
         super.exitStmtList(ctx);
     }
 
@@ -263,6 +258,20 @@ public class ByteCodeListener extends RegnaBaseListener {
         //ctx.constructor().enterRule(this);
         //ctx.constructor().exitRule(this);
         super.enterModuleBody(ctx);
+    }
+
+    private String convertConstructionStmt(RegnaParser.Construct_stmtContext ctx) {
+        return "new " + ctx.box_types().getText() + " " + convertParam(ctx.call_params());
+    }
+
+    private String convertConstructionStmt(RegnaParser.Construct_callContext ctx) {
+        return "new " + ctx.box_types().getText() + " " + convertParam(ctx.call_params());
+    }
+
+    @Override
+    public void enterConstruct_stmt(RegnaParser.Construct_stmtContext ctx) {
+        methodBuilder.registerCommand(convertConstructionStmt(ctx) + ";");
+        super.enterConstruct_stmt(ctx);
     }
 
     @Override
@@ -378,9 +387,7 @@ public class ByteCodeListener extends RegnaBaseListener {
     @Override
     public void enterStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx) {
         methodBuilder.registerCommand(ctx.id().getText() + " = new RStruct(" + ctx.mid().getText() + ");");
-        ctx.struct_param().forEach((param) -> {
-            methodBuilder.registerCommand(ctx.id().getText() + ".value(\"" + param.id().getText() + "\"," + getTypeText(param.type()) + ");");
-        });
+        ctx.struct_param().forEach((param) -> methodBuilder.registerCommand(ctx.id().getText() + ".value(\"" + param.id().getText() + "\"," + getTypeText(param.type()) + ");"));
         super.enterStruct_init_stmt(ctx);
     }
 

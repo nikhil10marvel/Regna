@@ -188,11 +188,26 @@ public interface RegnaListener extends ParseTreeListener {
 	 */
 	void exitConstruct_stmt(RegnaParser.Construct_stmtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link RegnaParser#attrvaldef}.
-	 * @param ctx the parse tree
-	 */
-	void enterAttrvaldef(RegnaParser.AttrvaldefContext ctx);
-	/**
+     * Enter a parse tree produced by {@link RegnaParser#construct_call}.
+     * @param ctx the parse tree
+     */
+    void enterConstruct_call(RegnaParser.Construct_callContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#construct_call}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitConstruct_call(RegnaParser.Construct_callContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#attrvaldef}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterAttrvaldef(RegnaParser.AttrvaldefContext ctx);
+
+    /**
 	 * Exit a parse tree produced by {@link RegnaParser#attrvaldef}.
 	 * @param ctx the parse tree
 	 */
@@ -267,8 +282,10 @@ public interface RegnaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMember_rule(RegnaParser.Member_ruleContext ctx);
-	/**
+
+    /**
      * Enter a parse tree produced by {@link RegnaParser#cast_type}.
+     *
      * @param ctx the parse tree
      */
     void enterCast_type(RegnaParser.Cast_typeContext ctx);
@@ -334,11 +351,13 @@ public interface RegnaListener extends ParseTreeListener {
      * @param ctx the parse tree
      */
     void exitExtract_type(RegnaParser.Extract_typeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#struct_val}.
-	 * @param ctx the parse tree
-	 */
-	void enterStruct_val(RegnaParser.Struct_valContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#struct_val}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterStruct_val(RegnaParser.Struct_valContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#struct_val}.
 	 * @param ctx the parse tree
@@ -362,12 +381,55 @@ public interface RegnaListener extends ParseTreeListener {
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#stmt}.
 	 * @param ctx the parse tree
-	 */
-	void exitStmt(RegnaParser.StmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#requireList}.
-	 * @param ctx the parse tree
-	 */
+     */
+    void exitStmt(RegnaParser.StmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#compiler_compile_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterCompiler_compile_instruction(RegnaParser.Compiler_compile_instructionContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#compiler_compile_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitCompiler_compile_instruction(RegnaParser.Compiler_compile_instructionContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#compiler_cp_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterCompiler_cp_instruction(RegnaParser.Compiler_cp_instructionContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#compiler_cp_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitCompiler_cp_instruction(RegnaParser.Compiler_cp_instructionContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#compiler_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterCompiler_instruction(RegnaParser.Compiler_instructionContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#compiler_instruction}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitCompiler_instruction(RegnaParser.Compiler_instructionContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#requireList}.
+     * @param ctx the parse tree
+     */
 	void enterRequireList(RegnaParser.RequireListContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#requireList}.
