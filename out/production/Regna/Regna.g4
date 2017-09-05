@@ -42,19 +42,21 @@ DBL_id: 'double';
 FLT_ID: 'float';
 BYTE: 'byte';
 SERIALIZABLE: 'serializable';
-Compiler_Compile_CMD: 'compile';
-Compiler_cpextend_CMD: 'include';
+COMPILER_INSTR: '@';
+Compiler_Compile_CMD: COMPILER_INSTR 'compile';
+Compiler_cpextend_CMD: COMPILER_INSTR 'include';
 
 // Some lexer tokens
 INTEGER: DIGIT+;
 SIMP_CHAR: LETTER | '_';
 SIMP_CHARS: LETTER(SIMP_CHAR|DIGIT)+;
 BASE_CHARACTER: SIMP_CHAR | SYMBOL;
-BASE_CHARACTERS: LETTER(BASE_CHARACTER)+;
+BASE_CHARACTERS: LETTER(BASE_CHARACTER|DIGIT)+;
 AR_CHARS: (SIMP_CHAR | ArrayOp)+;
 CHRCT: '\'' .? '\'';
 BlankLiteral: '"''"';
 StringLiteral: ('"' .+? '"') | BlankLiteral;
+//EVERY_THING: .*? EOS;
 
 id: SIMP_CHARS;
 mid: BASE_CHARACTERS|SIMP_CHARS;
@@ -134,11 +136,11 @@ stmt
     |struct_set_stmt
     ;
 
-compiler_compile_instruction: '#' Compiler_Compile_CMD .*? EOS;
-compiler_cp_instruction: '#' Compiler_cpextend_CMD .*? EOS;
+compiler_compile_instruction: Compiler_Compile_CMD StringLiteral EOS;
+compiler_cp_instruction: Compiler_cpextend_CMD StringLiteral EOS;
 compiler_instruction
-    : compiler_compile_instruction
-    | compiler_cp_instruction
+    :compiler_compile_instruction
+    |compiler_cp_instruction
     ;
 
 requireList: (require|compiler_instruction)+;

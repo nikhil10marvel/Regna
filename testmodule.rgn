@@ -1,0 +1,9 @@
+module test2 pkg io.regna2{
+
+    stval const String instance = "Deep!";
+
+    stfc void text {
+        print instance;
+    }
+
+}

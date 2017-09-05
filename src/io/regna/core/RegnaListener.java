@@ -208,7 +208,7 @@ public interface RegnaListener extends ParseTreeListener {
     void enterAttrvaldef(RegnaParser.AttrvaldefContext ctx);
 
     /**
-	 * Exit a parse tree produced by {@link RegnaParser#attrvaldef}.
+     * Exit a parse tree produced by {@link RegnaParser#attrvaldef}.
 	 * @param ctx the parse tree
 	 */
 	void exitAttrvaldef(RegnaParser.AttrvaldefContext ctx);
@@ -299,7 +299,7 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#struct_body}.
-	 * @param ctx the parse tree
+     * @param ctx the parse tree
 	 */
 	void enterStruct_body(RegnaParser.Struct_bodyContext ctx);
 	/**
@@ -354,10 +354,9 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#struct_val}.
-     *
      * @param ctx the parse tree
      */
-    void enterStruct_val(RegnaParser.Struct_valContext ctx);
+	void enterStruct_val(RegnaParser.Struct_valContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#struct_val}.
 	 * @param ctx the parse tree
@@ -378,9 +377,11 @@ public interface RegnaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void enterStmt(RegnaParser.StmtContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#stmt}.
-	 * @param ctx the parse tree
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#stmt}.
+     *
+     * @param ctx the parse tree
      */
     void exitStmt(RegnaParser.StmtContext ctx);
 
@@ -428,8 +429,8 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#requireList}.
-     * @param ctx the parse tree
-     */
+	 * @param ctx the parse tree
+	 */
 	void enterRequireList(RegnaParser.RequireListContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#requireList}.

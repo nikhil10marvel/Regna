@@ -258,7 +258,7 @@ public class RegnaBaseListener implements RegnaListener {
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
-	 */
+     */
 	@Override public void exitAttrvaldef(RegnaParser.AttrvaldefContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -406,10 +406,12 @@ public class RegnaBaseListener implements RegnaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-     *
+	@Override public void enterStruct_init_stmt(RegnaParser.Struct_init_stmtContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -431,13 +433,14 @@ public class RegnaBaseListener implements RegnaListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override
-    public void exitExtract_type(RegnaParser.Extract_typeContext ctx) { }
+    public void exitExtract_type(RegnaParser.Extract_typeContext ctx) {
+    }
 
     /**
      * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStruct_val(RegnaParser.Struct_valContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -462,11 +465,13 @@ public class RegnaBaseListener implements RegnaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStmt(RegnaParser.StmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
+	@Override public void enterStmt(RegnaParser.StmtContext ctx) {
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation does nothing.</p>
      */
     @Override
     public void exitStmt(RegnaParser.StmtContext ctx) {
@@ -523,13 +528,11 @@ public class RegnaBaseListener implements RegnaListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override
-    public void exitCompiler_instruction(RegnaParser.Compiler_instructionContext ctx) {
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
+    public void exitCompiler_instruction(RegnaParser.Compiler_instructionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void enterRequireList(RegnaParser.RequireListContext ctx) { }
 	/**

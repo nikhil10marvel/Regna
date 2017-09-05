@@ -6,6 +6,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ParserFacade {
@@ -16,7 +17,22 @@ public class ParserFacade {
     public static CommonTokenStream tokenStream;
 
 
-    public ParserFacade(String file){
+    public ParserFacade(File file) {
+        try {
+            lexer = new RegnaLexer(new ANTLRFileStream(file.getAbsolutePath()));
+            tokenStream = new CommonTokenStream(lexer);
+            parser = new RegnaParser(tokenStream);
+            parser.setBuildParseTree(true);
+            listener = new ByteCodeListener();
+            RegnaParser.ProgramContext programContext = parser.program();
+            ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
+            parseTreeWalker.walk(listener, programContext);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ParserFacade(String file) {
         try {
             lexer = new RegnaLexer(new ANTLRFileStream(file));
             tokenStream = new CommonTokenStream(lexer);
@@ -32,7 +48,7 @@ public class ParserFacade {
     }
 
     public void generate(){
-        listener.save(System.getProperty("user.dir"));
+        listener.save(System.getProperty("output.bin"));
     }
 
     public static class SimpleRegna extends RegnaBaseListener {

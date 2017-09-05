@@ -1,4 +1,6 @@
+@compile "testmodule.rgn"; ## Compile modules from this file.
 require javax.swing.JOptionPane;
+require io.regna2.test2;
 
 module nikhil pkg io.regna {
 
@@ -29,6 +31,8 @@ module nikhil pkg io.regna {
         System.out -> println(struct testvar => CharSequence name);
         testvar -> prepare();
         testvar -> serialize();
+        print test2 => instance;
+        test2 -> text();
         ## System.out -> println(struct testvar => id);
         JOptionPane -> showMessageDialog(null, msg);
     }

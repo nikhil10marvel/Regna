@@ -1,5 +1,6 @@
 package io.regna.jvm;
 
+import io.regna.core.ParserPool;
 import io.regna.core.RegnaBaseListener;
 import io.regna.core.RegnaCompilationException;
 import io.regna.core.RegnaParser;
@@ -12,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Main class to Compile Regna code to java bytecode that can be executed by the JVM
@@ -20,7 +23,7 @@ public class ByteCodeListener extends RegnaBaseListener {
 
     private CtClass module;
 
-    private ClassPool cp = ClassPool.getDefault();
+    private ClassPool cp = ParserPool.getClassPool();
     private MethodBuilder methodBuilder;
     private String module_name;
 
@@ -99,7 +102,7 @@ public class ByteCodeListener extends RegnaBaseListener {
      */
     public byte[] to_bytes(){
         try {
-            System.out.println("Generating ByteCode");
+            //System.out.println("Generating ByteCode");
             return module.toBytecode();
         } catch (IOException | CannotCompileException e) {
             e.printStackTrace();
@@ -112,16 +115,18 @@ public class ByteCodeListener extends RegnaBaseListener {
      * @param dir The Directory to save to
      */
     public void save(String dir){
-        File f = new File(dir,module_name + ".class");
+        String dirs = dir + File.separator + module.getPackageName().replaceAll(Pattern.quote("."), Matcher.quoteReplacement(File.separator));
+        File f = new File(dirs, module_name + ".class");
         if(!f.exists()) try {
+            if (!f.getParentFile().exists()) f.getParentFile().mkdirs();
             final boolean newFile = f.createNewFile();
-            System.out.println(newFile ? "File not created" : "");
+            System.out.println(!newFile ? "File not created" : "");
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
             Files.write(Paths.get(f.getAbsolutePath()), to_bytes());
-            System.out.println("SAVING TO FILE " + f.getAbsolutePath());
+            //System.out.println("SAVING TO FILE " + f.getAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -368,6 +373,14 @@ public class ByteCodeListener extends RegnaBaseListener {
     public void enterRequire(RegnaParser.RequireContext ctx) {
         cp.importPackage(ctx.mid().getText());
         super.enterRequire(ctx);
+    }
+
+    @Override
+    public void enterCompiler_compile_instruction(RegnaParser.Compiler_compile_instructionContext ctx) {
+        String filename = ctx.StringLiteral().getText().substring(1, ctx.StringLiteral().getText().length() - 1);
+        ParserPool.enter(filename);
+        //System.out.println(filename);
+        super.enterCompiler_compile_instruction(ctx);
     }
 
     @Override

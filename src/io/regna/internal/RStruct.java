@@ -244,7 +244,7 @@ public final class RStruct implements Serializable {
     public static byte[] readbytes(int length, DataInputStream dataInputStream) {
         byte[] ret = new byte[length];
         try {
-            dataInputStream.readFully(ret, offset, length - offset);
+            dataInputStream.read(ret, offset, length - offset);
             offset += length;
         } catch (IOException e) {
             e.printStackTrace();
@@ -270,7 +270,7 @@ public final class RStruct implements Serializable {
             data = new byte[length];
             //System.out.println(data.length - offset > length ? "true" : "false");
             System.out.println(offset);
-            dataInputStream.readFully(data, offset, length - offset);
+            dataInputStream.read(data, offset, length - offset);
             offset += length;
         } catch (IOException e) {
             e.printStackTrace();
