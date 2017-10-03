@@ -1,13 +1,16 @@
 package io.regna.core;
 
-import io.regna.core.RegnaParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.misc.Interval;
 
+import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class RegnaCompilationException extends RuntimeException{
 
@@ -51,6 +54,15 @@ public class RegnaCompilationException extends RuntimeException{
         b = ctx.stop.getStopIndex();
         Interval interval = new Interval(a,b);
         return stream.getText(interval);
+    }
+
+    public static String getLinefromLineNumber(int line_num, String filename) {
+        try (Stream<String> lines = Files.lines(Paths.get(filename))) {
+            return lines.skip(line_num).findFirst().get();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override

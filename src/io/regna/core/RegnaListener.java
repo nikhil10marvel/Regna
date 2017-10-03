@@ -108,8 +108,357 @@ public interface RegnaListener extends ParseTreeListener {
 	 */
 	void exitValue(RegnaParser.ValueContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link RegnaParser#field_param}.
-	 * @param ctx the parse tree
+     * Enter a parse tree produced by {@link RegnaParser#varaddinc_stmt}.
+     * @param ctx the parse tree
+     */
+    void enterVaraddinc_stmt(RegnaParser.Varaddinc_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#varaddinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitVaraddinc_stmt(RegnaParser.Varaddinc_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#varsubinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterVarsubinc_stmt(RegnaParser.Varsubinc_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#varsubinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitVarsubinc_stmt(RegnaParser.Varsubinc_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#varmulinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterVarmulinc_stmt(RegnaParser.Varmulinc_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#varmulinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitVarmulinc_stmt(RegnaParser.Varmulinc_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#vardivinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterVardivinc_stmt(RegnaParser.Vardivinc_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#vardivinc_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitVardivinc_stmt(RegnaParser.Vardivinc_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#greaterthan}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterGreaterthan(RegnaParser.GreaterthanContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#greaterthan}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitGreaterthan(RegnaParser.GreaterthanContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#lesserthan}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterLesserthan(RegnaParser.LesserthanContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#lesserthan}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitLesserthan(RegnaParser.LesserthanContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#greaterthanE}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterGreaterthanE(RegnaParser.GreaterthanEContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#greaterthanE}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitGreaterthanE(RegnaParser.GreaterthanEContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#lesserthanE}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterLesserthanE(RegnaParser.LesserthanEContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#lesserthanE}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitLesserthanE(RegnaParser.LesserthanEContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#notequalto}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterNotequalto(RegnaParser.NotequaltoContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#notequalto}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitNotequalto(RegnaParser.NotequaltoContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#equalto}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterEqualto(RegnaParser.EqualtoContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#equalto}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitEqualto(RegnaParser.EqualtoContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#false_con}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterFalse_con(RegnaParser.False_conContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#false_con}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitFalse_con(RegnaParser.False_conContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#true_con}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterTrue_con(RegnaParser.True_conContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#true_con}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitTrue_con(RegnaParser.True_conContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#boolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterBoolval(RegnaParser.BoolvalContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#boolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitBoolval(RegnaParser.BoolvalContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#notboolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterNotboolval(RegnaParser.NotboolvalContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#notboolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitNotboolval(RegnaParser.NotboolvalContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#logicexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterLogicexpr(RegnaParser.LogicexprContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#logicexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitLogicexpr(RegnaParser.LogicexprContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#enclosed_boolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterEnclosed_boolval(RegnaParser.Enclosed_boolvalContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#enclosed_boolval}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitEnclosed_boolval(RegnaParser.Enclosed_boolvalContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#andboolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterAndboolexpr(RegnaParser.AndboolexprContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#andboolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitAndboolexpr(RegnaParser.AndboolexprContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#orboolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterOrboolexpr(RegnaParser.OrboolexprContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#orboolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitOrboolexpr(RegnaParser.OrboolexprContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#boolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterBoolexpr(RegnaParser.BoolexprContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#boolexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitBoolexpr(RegnaParser.BoolexprContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#boolparseexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterBoolparseexpr(RegnaParser.BoolparseexprContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#boolparseexpr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitBoolparseexpr(RegnaParser.BoolparseexprContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#array_reference}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterArray_reference(RegnaParser.Array_referenceContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#array_reference}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitArray_reference(RegnaParser.Array_referenceContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#new_reference}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterNew_reference(RegnaParser.New_referenceContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#new_reference}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitNew_reference(RegnaParser.New_referenceContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#array_set_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterArray_set_stmt(RegnaParser.Array_set_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#array_set_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitArray_set_stmt(RegnaParser.Array_set_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#array_def_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterArray_def_stmt(RegnaParser.Array_def_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#array_def_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitArray_def_stmt(RegnaParser.Array_def_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#array_inst}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterArray_inst(RegnaParser.Array_instContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#array_inst}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitArray_inst(RegnaParser.Array_instContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#field_param}.
+     * @param ctx the parse tree
 	 */
 	void enterField_param(RegnaParser.Field_paramContext ctx);
 	/**
@@ -164,25 +513,32 @@ public interface RegnaListener extends ParseTreeListener {
 	void enterLocalvar_stmt(RegnaParser.Localvar_stmtContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#localvar_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitLocalvar_stmt(RegnaParser.Localvar_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#print_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterPrint_stmt(RegnaParser.Print_stmtContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#print_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitPrint_stmt(RegnaParser.Print_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#construct_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstruct_stmt(RegnaParser.Construct_stmtContext ctx);
-	/**
+     * @param ctx the parse tree
+     */
+    void exitLocalvar_stmt(RegnaParser.Localvar_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#print_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterPrint_stmt(RegnaParser.Print_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#print_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitPrint_stmt(RegnaParser.Print_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#construct_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterConstruct_stmt(RegnaParser.Construct_stmtContext ctx);
+
+    /**
 	 * Exit a parse tree produced by {@link RegnaParser#construct_stmt}.
 	 * @param ctx the parse tree
 	 */
@@ -209,7 +565,7 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Exit a parse tree produced by {@link RegnaParser#attrvaldef}.
-	 * @param ctx the parse tree
+     * @param ctx the parse tree
 	 */
 	void exitAttrvaldef(RegnaParser.AttrvaldefContext ctx);
 	/**
@@ -259,18 +615,21 @@ public interface RegnaListener extends ParseTreeListener {
 	void enterMembercall_stmt(RegnaParser.Membercall_stmtContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#membercall_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitMembercall_stmt(RegnaParser.Membercall_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#internal_call}.
-	 * @param ctx the parse tree
-	 */
-	void enterInternal_call(RegnaParser.Internal_callContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#internal_call}.
-	 * @param ctx the parse tree
-	 */
+     * @param ctx the parse tree
+     */
+    void exitMembercall_stmt(RegnaParser.Membercall_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#internal_call}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterInternal_call(RegnaParser.Internal_callContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#internal_call}.
+     * @param ctx the parse tree
+     */
 	void exitInternal_call(RegnaParser.Internal_callContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RegnaParser#member_rule}.
@@ -299,7 +658,7 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#struct_body}.
-     * @param ctx the parse tree
+	 * @param ctx the parse tree
 	 */
 	void enterStruct_body(RegnaParser.Struct_bodyContext ctx);
 	/**
@@ -314,20 +673,25 @@ public interface RegnaListener extends ParseTreeListener {
 	void enterStruct_stmt(RegnaParser.Struct_stmtContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link RegnaParser#struct_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitStruct_stmt(RegnaParser.Struct_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#struct_param}.
-	 * @param ctx the parse tree
-	 */
-	void enterStruct_param(RegnaParser.Struct_paramContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#struct_param}.
-	 * @param ctx the parse tree
-	 */
-	void exitStruct_param(RegnaParser.Struct_paramContext ctx);
-	/**
+     * @param ctx the parse tree
+     */
+    void exitStruct_stmt(RegnaParser.Struct_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#struct_param}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterStruct_param(RegnaParser.Struct_paramContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#struct_param}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitStruct_param(RegnaParser.Struct_paramContext ctx);
+
+    /**
 	 * Enter a parse tree produced by {@link RegnaParser#struct_init_stmt}.
 	 * @param ctx the parse tree
 	 */
@@ -340,7 +704,6 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#extract_type}.
-     *
      * @param ctx the parse tree
      */
     void enterExtract_type(RegnaParser.Extract_typeContext ctx);
@@ -354,29 +717,122 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Enter a parse tree produced by {@link RegnaParser#struct_val}.
+     *
      * @param ctx the parse tree
      */
-	void enterStruct_val(RegnaParser.Struct_valContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#struct_val}.
-	 * @param ctx the parse tree
-	 */
-	void exitStruct_val(RegnaParser.Struct_valContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#struct_set_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterStruct_set_stmt(RegnaParser.Struct_set_stmtContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RegnaParser#struct_set_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitStruct_set_stmt(RegnaParser.Struct_set_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RegnaParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterStmt(RegnaParser.StmtContext ctx);
+    void enterStruct_val(RegnaParser.Struct_valContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#struct_val}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitStruct_val(RegnaParser.Struct_valContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#struct_set_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterStruct_set_stmt(RegnaParser.Struct_set_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#struct_set_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitStruct_set_stmt(RegnaParser.Struct_set_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#return_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterReturn_stmt(RegnaParser.Return_stmtContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#return_stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitReturn_stmt(RegnaParser.Return_stmtContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#elseif_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterElseif_block(RegnaParser.Elseif_blockContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#elseif_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitElseif_block(RegnaParser.Elseif_blockContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#else_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterElse_block(RegnaParser.Else_blockContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#else_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitElse_block(RegnaParser.Else_blockContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#if_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterIf_block(RegnaParser.If_blockContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#if_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitIf_block(RegnaParser.If_blockContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#while_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterWhile_block(RegnaParser.While_blockContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#while_block}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitWhile_block(RegnaParser.While_blockContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#block}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterBlock(RegnaParser.BlockContext ctx);
+
+    /**
+     * Exit a parse tree produced by {@link RegnaParser#block}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitBlock(RegnaParser.BlockContext ctx);
+
+    /**
+     * Enter a parse tree produced by {@link RegnaParser#stmt}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterStmt(RegnaParser.StmtContext ctx);
 
     /**
      * Exit a parse tree produced by {@link RegnaParser#stmt}.
@@ -394,7 +850,6 @@ public interface RegnaListener extends ParseTreeListener {
 
     /**
      * Exit a parse tree produced by {@link RegnaParser#compiler_compile_instruction}.
-     *
      * @param ctx the parse tree
      */
     void exitCompiler_compile_instruction(RegnaParser.Compiler_compile_instructionContext ctx);

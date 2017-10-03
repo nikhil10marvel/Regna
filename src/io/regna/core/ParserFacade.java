@@ -14,7 +14,7 @@ public class ParserFacade {
     RegnaLexer lexer;
     RegnaParser parser;
     ByteCodeListener listener;
-    public static CommonTokenStream tokenStream;
+    public CommonTokenStream tokenStream;
 
 
     public ParserFacade(File file) {
@@ -23,7 +23,7 @@ public class ParserFacade {
             tokenStream = new CommonTokenStream(lexer);
             parser = new RegnaParser(tokenStream);
             parser.setBuildParseTree(true);
-            listener = new ByteCodeListener();
+            listener = new ByteCodeListener(file.getAbsolutePath(), tokenStream);
             RegnaParser.ProgramContext programContext = parser.program();
             ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
             parseTreeWalker.walk(listener, programContext);
@@ -38,13 +38,17 @@ public class ParserFacade {
             tokenStream = new CommonTokenStream(lexer);
             parser = new RegnaParser(tokenStream);
             parser.setBuildParseTree(true);
-            listener = new ByteCodeListener();
+            listener = new ByteCodeListener(file, tokenStream);
             RegnaParser.ProgramContext programContext = parser.program();
             ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
             parseTreeWalker.walk(listener, programContext);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void require(String module) {
+        listener.require(module);
     }
 
     public void generate(){

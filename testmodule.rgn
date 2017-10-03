@@ -1,9 +1,37 @@
+require javax.swing.JOptionPane;
+
 module test2 pkg io.regna2{
 
-    stval const String instance = "Deep!";
+    stval const String string_inst = "Deep!";
+    val int num = 24;
+    val int num2 = 6;
+
+    construct (number: int){
+        let num = number;
+    }
 
     stfc void text {
-        print instance;
+        print string_inst;
+    }
+
+    def void output {
+        print num;
+    }
+
+    def int divide {
+        return (num / num2);
+    }
+
+    def int addnums(num1 : int, num2: int){
+        return (num1 + num2);
+    }
+
+    def boolean ask(what : String){
+##        val const int pos[][] = int[] -> inst 20;
+##        val int somepos = pos $(0);
+##        let pos $(0) = int -> inst 10;
+        val boolean asked = JOptionPane -> showConfirmDialog(null, what);
+        return asked;
     }
 
 }
