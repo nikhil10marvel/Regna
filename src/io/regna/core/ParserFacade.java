@@ -6,6 +6,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ParserFacade {
@@ -13,16 +14,16 @@ public class ParserFacade {
     RegnaLexer lexer;
     RegnaParser parser;
     ByteCodeListener listener;
-    public static CommonTokenStream tokenStream;
+    public CommonTokenStream tokenStream;
 
 
-    public ParserFacade(String file){
+    public ParserFacade(File file) {
         try {
-            lexer = new RegnaLexer(new ANTLRFileStream(file));
+            lexer = new RegnaLexer(new ANTLRFileStream(file.getAbsolutePath()));
             tokenStream = new CommonTokenStream(lexer);
             parser = new RegnaParser(tokenStream);
             parser.setBuildParseTree(true);
-            listener = new ByteCodeListener();
+            listener = new ByteCodeListener(file.getAbsolutePath(), tokenStream);
             RegnaParser.ProgramContext programContext = parser.program();
             ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
             parseTreeWalker.walk(listener, programContext);
@@ -31,8 +32,27 @@ public class ParserFacade {
         }
     }
 
+    public ParserFacade(String file) {
+        try {
+            lexer = new RegnaLexer(new ANTLRFileStream(file));
+            tokenStream = new CommonTokenStream(lexer);
+            parser = new RegnaParser(tokenStream);
+            parser.setBuildParseTree(true);
+            listener = new ByteCodeListener(file, tokenStream);
+            RegnaParser.ProgramContext programContext = parser.program();
+            ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
+            parseTreeWalker.walk(listener, programContext);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void require(String module) {
+        listener.require(module);
+    }
+
     public void generate(){
-        listener.save(System.getProperty("user.dir"));
+        listener.save(System.getProperty("output.bin"));
     }
 
     public static class SimpleRegna extends RegnaBaseListener {

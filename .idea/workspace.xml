@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Compiler" />
+      <artifact name="regnac-debug" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30479996-1897-457d-8782-a80e83abc95d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Regna/test.struct" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nikhil.class" afterPath="$PROJECT_DIR$/nikhil.class" />
+    <list default="true" id="30479996-1897-457d-8782-a80e83abc95d" name="Default" comment="Added If statements, boolean expressions, while loops, increments, arrays, array referencing, return statements, Compiler instructions.&#10;&#10;Fixed major method based issues">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/regnac_debug.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Compiler/Compiler.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/Main.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/ParserFacade$SimpleRegna.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/ParserFacade$SimpleRegna.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/ParserFacade.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/ParserFacade.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaBaseListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaCompilationException.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaCompilationException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaLexer.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaLexer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AddContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AddContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AridContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$AridContext.class" />
@@ -57,18 +63,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Vardef_stmtContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$Vardef_stmtContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$VartypeContext.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser$VartypeContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct$StructHeader.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct$StructHeader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/internal/RStruct.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/ByteCodeListener.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/ByteCodeListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/MethodBuilder.class" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/jvm/MethodBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/Regna.g4" afterPath="$PROJECT_DIR$/out/production/Regna/Regna.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/Regna.tokens" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/Regna.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaLexer.tokens" afterPath="$PROJECT_DIR$/out/production/Regna/io/regna/core/RegnaLexer.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Regna.g4" afterPath="$PROJECT_DIR$/src/Regna.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/ParserFacade.java" afterPath="$PROJECT_DIR$/src/io/regna/core/ParserFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/ParserPool.java" afterPath="$PROJECT_DIR$/src/io/regna/core/ParserPool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/Regna.tokens" afterPath="$PROJECT_DIR$/src/io/regna/core/Regna.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaBaseListener.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaLexer.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaLexer.tokens" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaLexer.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaListener.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/core/RegnaParser.java" afterPath="$PROJECT_DIR$/src/io/regna/core/RegnaParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" afterPath="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" afterPath="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java" afterPath="$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.rgn" afterPath="$PROJECT_DIR$/test.rgn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testmodule.rgn" afterPath="$PROJECT_DIR$/testmodule.rgn" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,16 +95,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="RStruct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
+      <file leaf-file-name="ParserFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="194" column="62" lean-forward="false" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+            <state relative-caret-position="660">
+              <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParserPool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#278#305#0" expanded="true" />
-                <element signature="e#3516#3517#0" expanded="true" />
-                <element signature="e#3555#3556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +120,8 @@
       <file leaf-file-name="ByteCodeListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3151">
-              <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+            <state relative-caret-position="-2">
+              <caret line="178" column="51" lean-forward="false" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,24 +129,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SerializerThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/SerializerThread.java">
+      <file leaf-file-name="test2.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rgen/io/regna2/test2.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#108#135#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="164">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RStructDef.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStructDef.java">
+      <file leaf-file-name="nikhil.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rgen/io/regna/nikhil.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="38">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -133,22 +152,30 @@
       <file leaf-file-name="RegnaCompilationException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="71" column="48" lean-forward="false" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
+            <state relative-caret-position="1060">
+              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MethodBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2348#2349#0" expanded="true" />
-                <element signature="e#2391#2392#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegnaParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaParser.java">
+      <file leaf-file-name="testmodule.rgn" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testmodule.rgn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+            <state relative-caret-position="660">
+              <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -157,8 +184,8 @@
       <file leaf-file-name="test.rgn" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.rgn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="246">
+              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -167,28 +194,8 @@
       <file leaf-file-name="Regna.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Regna.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nikhil.class" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nikhil.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -205,10 +212,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>local</find>
-      <find>AttrValDef</find>
-      <find>Static</find>
-      <find>enterStruct</find>
+      <find>compiler_cp</find>
+      <find>convert</find>
+      <find>convertBoo</find>
+      <find>return</find>
+      <find>return_stmt</find>
+      <find>enterStmtList</find>
+      <find>convertBoolVal</find>
+      <find>System.out.println</find>
+      <find>println</find>
+      <find>convertExpr</find>
+      <find>notboolval</find>
+      <find>convertBoolexpr</find>
+      <find>while</find>
+      <find>mid</find>
+      <find>call_param</find>
+      <find>formal</find>
+      <find>boolval</find>
+      <find>enterAr</find>
+      <find>throw</find>
+      <find>NewRefe</find>
+      <find>String</find>
+      <find>STR_ID</find>
+      <find>struct_</find>
+      <find>array</find>
+      <find>array_in</find>
+      <find>getTypeText(Re</find>
+      <find>getTypeText(R</find>
+      <find>arra</find>
+      <find>array_inst</find>
+      <find>inc</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -220,11 +253,17 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Nikhil &lt;nikhiljerry009@gmail.com&gt;" />
         <option value="Fi" />
       </list>
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -241,25 +280,29 @@
         <option value="$PROJECT_DIR$/nikhil.class" />
         <option value="$PROJECT_DIR$/src/io/regna/RegnaCompiletimeException.java" />
         <option value="$PROJECT_DIR$/src/io/regna/RegnaCompilationException.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/core/ParserFacade.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java" />
         <option value="$PROJECT_DIR$/src/io/regna/std/RStruct.java" />
         <option value="$PROJECT_DIR$/src/io/regna/io/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/io/regna/internal/RStructDef.java" />
         <option value="$PROJECT_DIR$/src/util/Serializer.java" />
         <option value="$PROJECT_DIR$/src/util/SerializerThread.java" />
-        <option value="$PROJECT_DIR$/src/io/regna/core/Main.java" />
-        <option value="$PROJECT_DIR$/src/Regna.g4" />
-        <option value="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
         <option value="$PROJECT_DIR$/src/io/regna/internal/RStruct.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/RegnaParser.java" />
+        <option value="$PROJECT_DIR$/src/BoolExpr.g4" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/ParserPool.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/Main.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/ParserFacade.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java" />
+        <option value="$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java" />
+        <option value="$PROJECT_DIR$/src/Regna.g4" />
+        <option value="$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java" />
         <option value="$PROJECT_DIR$/test.rgn" />
+        <option value="$PROJECT_DIR$/testmodule.rgn" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="243" />
+    <option name="x" value="-9" />
     <option name="width" value="1400" />
     <option name="height" value="990" />
   </component>
@@ -278,16 +321,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
               <item name="Regna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regna" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regna" type="462c0819:PsiDirectoryNode" />
+              <item name="rgen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regna" type="462c0819:PsiDirectoryNode" />
+              <item name="rgen" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regna" type="462c0819:PsiDirectoryNode" />
+              <item name="rgen" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="regna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regna" type="462c0819:PsiDirectoryNode" />
+              <item name="rgen" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="regna2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Regna" type="b2602c69:ProjectViewProjectNode" />
@@ -331,17 +400,21 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/language" value="Java" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/gen-visitor" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kryo-4.0.1/lib/reflectasm-1.10.1-shaded.jar!/" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/output-dir" value="Z:\Java\ideaspace\Regna\src" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15546875" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="$PROJECT_DIR$/src/Regna.g4::/package" value="io.regna.core" />
@@ -367,7 +440,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="io.regna.core.Main" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-Doutput.bin=&quot;.\rgen&quot;" />
       <option name="PROGRAM_PARAMETERS" value="test.rgn" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -446,7 +519,28 @@
       <option name="project" value="LOCAL" />
       <updated>1503222889675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed fast RStructs variable referencing, serialization, etc. Added type casting. Changed variable referencing Syntax, it now returns a Generic Object instead of the actual Object. It can now take an additional parameter, with which it is automatically casted.">
+      <created>1503233541983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1503233541983</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added compiler instructions in parser and lexer.">
+      <created>1504526652514</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1504526652514</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added compiler instructions in parser and lexer.&#10;Implemented `@compile` instruction.&#10;&#10;Added ParserPool. Use  ParserPool for parsing files that reference other files.">
+      <created>1504609859147</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1504609859147</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -455,25 +549,25 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30523917" sideWeight="0.49570355" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6697039" sideWeight="0.5150376" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6697039" sideWeight="0.5150376" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32118452" sideWeight="0.4849624" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30637813" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16863587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3690205" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1734694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3690205" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1970999" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40091115" sideWeight="0.49570355" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -481,36 +575,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30637813" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3690205" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14446831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -544,7 +608,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made some changes in RStruct and StructDef added Serializer Thread" />
     <MESSAGE value="Fixed fast RStructs variable referencing, serialization, etc. Added type casting. Changed variable referencing Syntax, it now returns a Generic Object instead of the actual Object. It can now take an additional parameter, with which it is automatically casted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed fast RStructs variable referencing, serialization, etc. Added type casting. Changed variable referencing Syntax, it now returns a Generic Object instead of the actual Object. It can now take an additional parameter, with which it is automatically casted." />
+    <MESSAGE value="Added compiler instructions in parser and lexer." />
+    <MESSAGE value="Added compiler instructions in parser and lexer.&#10;Implemented `@compile` instruction.&#10;&#10;Added ParserPool. Use  ParserPool for parsing files that reference other files." />
+    <MESSAGE value="Added If statements, boolean expressions, while loops, increments, arrays, array referencing, return statements, Compiler instructions.&#10;&#10;Fixed major method based issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added If statements, boolean expressions, while loops, increments, arrays, array referencing, return statements, Compiler instructions.&#10;&#10;Fixed major method based issues" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -560,92 +629,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1880">
-          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="189" column="44" lean-forward="false" selection-start-line="189" selection-start-column="44" selection-end-line="189" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2320">
-          <caret line="116" column="47" lean-forward="false" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rgn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,9 +689,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -842,56 +827,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/regna/nikhil.class" />
-    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="86" column="14" lean-forward="false" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="71" column="48" lean-forward="false" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2348#2349#0" expanded="true" />
-            <element signature="e#2391#2392#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/SerializerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="460">
           <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#108#135#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,70 +845,145 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nikhil.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91-64/src.zip!/java/io/DataInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91-64/src.zip!/java/io/ByteArrayInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="165" column="48" lean-forward="false" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="244" column="34" lean-forward="false" selection-start-line="244" selection-start-column="34" selection-end-line="244" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91-64/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgen/io/regna/test2.class" />
+    <entry file="file://$PROJECT_DIR$/src/BoolExpr.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+        <state relative-caret-position="282">
+          <caret line="1512" column="30" lean-forward="false" selection-start-line="1512" selection-start-column="30" selection-end-line="1512" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/regna/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/core/RegnaCompilationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/core/ParserPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/ByteCodeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3151">
-          <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+        <state relative-caret-position="-2">
+          <caret line="178" column="51" lean-forward="false" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/regna/internal/RStruct.java">
+    <entry file="file://$PROJECT_DIR$/src/Regna.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="194" column="62" lean-forward="false" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#278#305#0" expanded="true" />
-            <element signature="e#3516#3517#0" expanded="true" />
-            <element signature="e#3555#3556#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.rgn">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="246">
+          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nikhil.class">
+    <entry file="file://$PROJECT_DIR$/rgen/io/regna2/test2.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        <state relative-caret-position="164">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgen/io/regna/nikhil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testmodule.rgn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/regna/jvm/MethodBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -972,7 +993,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>Compiler</last-edited>
+          <last-edited>regnac-debug</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,4 +1,7 @@
+#compile "testmodule.rgn"; ## Compile module from this file.
 require javax.swing.JOptionPane;
+require io.regna2.test2; ## Import the compiled module.
+require java.util.Arrays;
 
 module nikhil pkg io.regna {
 
@@ -15,10 +18,10 @@ module nikhil pkg io.regna {
      # This is a multi-line comment
     ]#
     stfc void main(args : String[]) {
-        structdef test {
+        #[structdef test {
             int num,
-            float PI,
-            String name
+            float PI
+        ##    String name
         };
         val RStruct testvar;
         struct test init testvar {PI 314, num 225, name "Nikhil"};
@@ -28,7 +31,23 @@ module nikhil pkg io.regna {
         val String VERSION = "Hello";
         System.out -> println(struct testvar => CharSequence name);
         testvar -> prepare();
-        testvar -> serialize();
+        testvar -> serialize();]#
+        ## print test2 => instance;
+        test2 -> text();
+        val test2 Test2 = test2 -> inst(10);
+        Test2 -> output();
+        val boolean result = Test2 -> ask("Would you rather eat a sandwich ?");
+        print result;
+        if result {
+           val int nums[] = int -> inst 11;
+           val int xx = 0;
+           while(xx < nums.length){
+               let nums $(xx) = xx;
+               print xx;
+               xx += 1;
+           }
+           print Arrays -> toString(nums);
+        }
         ## System.out -> println(struct testvar => id);
         JOptionPane -> showMessageDialog(null, msg);
     }

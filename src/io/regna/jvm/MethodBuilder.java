@@ -1,7 +1,6 @@
 package io.regna.jvm;
 
 import io.regna.core.RegnaCompilationException;
-import io.regna.core.ParserFacade;
 import io.regna.core.RegnaParser;
 import org.antlr.v4.runtime.ParserRuleContext;
 
@@ -32,7 +31,11 @@ public class MethodBuilder {
 //                command = command.replaceAll(param, "$"+x);
 //            }
 //        }
-        commands.append(command);
+        if (!command.startsWith(";")) {
+            commands.append(command + ";");
+        } else {
+            commands.append(";");
+        }
     }
 
     /**
@@ -81,13 +84,13 @@ public class MethodBuilder {
         if(!vars.containsKey(name)){
             vars.put(name, type);
             if((!constkey.isEmpty()) && value.equals("")) {
-                throw new RegnaCompilationException(ctx.getStart().getLine(), ctx.getStop().getLine(), "Expected attribute value", RegnaCompilationException.getLineFromRule(ctx, ParserFacade.tokenStream));
+                throw new RegnaCompilationException(ctx.getStart().getLine(), ctx.getStop().getLine(), "Expected attribute value", RegnaCompilationException.getLineFromRule(ctx, ctx.start.getInputStream()));
             }
             String def = constkey + " " + type + " " + name + value + ";";
             //System.out.println(def);
             registerCommand(def);
         } else {
-            throw new RegnaCompilationException(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), "Duplicate Local Variable", RegnaCompilationException.getLineFromRule(ctx, ParserFacade.tokenStream));
+            throw new RegnaCompilationException(ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), "Duplicate Local Variable", RegnaCompilationException.getLineFromRule(ctx, ctx.start.getInputStream()));
         }
     }
 
